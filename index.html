@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>孫晴盈 - 帳戶 1 與帳戶 2 綜合理財儀錶板</title>
-  <meta name="description" content="孫晴盈基金管理 - 帳戶 1 與帳戶 2 的總資產估值、累積配息收益、扣款費用明細與即時績效對比儀錶板。">
+  <title>5 檔中國地產國企與高股息基金追蹤儀錶板</title>
+  <meta name="description" content="基金追蹤專案 - 聚焦中國大陸國有房企 (SOEs) 與高股息標的之 5 檔精選基金/ETF 即時淨值、資產配置與深度研究儀錶板。">
   <meta name="theme-color" content="#f8fafc">
 
   <!-- Google Fonts -->
@@ -20,6 +20,24 @@
 
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
+  <style>
+    .risk-badge { font-size: 0.75rem; font-weight: 800; padding: 4px 8px; border-radius: 6px; }
+    .badge-rr5 { background: #ffe4e6; color: #be123c; }
+    .badge-rr4 { background: #dcfce7; color: #15803d; }
+    .fund-card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .fund-card-title { font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px; }
+    .fund-card-sub { font-size: 0.8rem; color: var(--text-secondary); }
+    .fund-card-nav { background: #f8fafc; padding: 12px 16px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+    .nav-label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 600; }
+    .nav-val { font-size: 1.25rem; font-weight: 800; color: #0284c7; }
+    .section-title { font-size: 0.85rem; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+    .holdings-list { margin: 0 0 12px 0; padding-left: 20px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+    .highlight { color: #0284c7; font-weight: 700; }
+    .other-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+    .tag { background: #f1f5f9; color: var(--text-secondary); font-size: 0.75rem; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+    .strategy-box { background: #f0f9ff; border-left: 4px solid #0284c7; padding: 10px 12px; font-size: 0.82rem; color: #0369a1; border-radius: 4px; line-height: 1.5; }
+    .fund-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 20px; }
+  </style>
 </head>
 <body>
 
@@ -28,243 +46,136 @@
     <!-- Header Navigation -->
     <header class="header-nav">
       <div class="brand-section">
-        <div class="brand-icon">
-          <i class="fa-solid fa-chart-pie"></i>
+        <div class="brand-icon" style="background: #0284c7;">
+          <i class="fa-solid fa-building-flag"></i>
         </div>
         <div>
           <h1 class="brand-title">基金追蹤 · 5 檔中國地產國企/高股息基金專題儀錶板</h1>
-          <p class="brand-subtitle">五檔地產國企新基金淨值追蹤、持股剖析與研究報告網頁</p>
+          <p class="brand-subtitle">臺灣地區公開發行 ｜ 聚焦中國大陸國有房企 (SOEs) 與高股息 ETF 配置監控</p>
         </div>
       </div>
       <div class="header-status">
         <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-          <a href="index.html" class="nav-btn active" style="border: 2px solid var(--color-indigo); font-weight: 800;"><i class="fa-solid fa-house"></i> 雙帳戶總儀錶板</a>
-          <a href="featured_funds.html" class="nav-btn"><i class="fa-solid fa-folder-tree" style="color: var(--color-indigo);"></i> 精選 7 檔基金中心</a>
-          <a href="china_property_soe_research.html" class="nav-btn"><i class="fa-solid fa-building-flag" style="color: #0284c7;"></i> 中國地產國企 5 檔研究 (含00882)</a>
+          <a href="index.html" class="nav-btn active" style="border: 2px solid #0284c7; font-weight: 800;"><i class="fa-solid fa-chart-line" style="color: #0284c7;"></i> 5檔基金動態總覽</a>
+          <a href="china_property_soe_research.html" class="nav-btn"><i class="fa-solid fa-book-open" style="color: #0284c7;"></i> 專題研究報告</a>
         </div>
         <div class="status-badge">
           <span class="status-dot"></span>
           <span>資料連線正常</span>
         </div>
-        <span class="update-tag" id="lastUpdatedText">更新時間: 2026-08-11</span>
+        <span class="update-tag" id="lastUpdatedText">最新淨值日期: 2026-08-17</span>
       </div>
     </header>
 
-    <!-- Key Metrics Summary Grid -->
-    <section class="metrics-grid">
-      <div class="metric-card gold">
-        <div class="metric-header">
-          <span class="metric-label">總資產估值</span>
-          <div class="metric-icon"><i class="fa-solid fa-vault"></i></div>
+    <!-- Executive Summary Banner -->
+    <section class="glass-panel" style="margin-bottom: 24px; padding: 20px; border-left: 5px solid #0284c7;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+        <div>
+          <h2 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;">
+            <i class="fa-solid fa-shield-halved" style="color: #0284c7; margin-right: 6px;"></i> 中國地產國企 (SOE Developers) 與高股息標的追蹤矩陣
+          </h2>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0;">
+            在中國房地產去槓桿與民營房企風險釋放後，資產負債表堅實的中央與地方國企（華潤置地、中國海外發展、保利發展、中國建築）成為絕對主力。以下為 5 檔精選標的之最新動態與持股。
+          </p>
         </div>
-        <div class="metric-value" id="totalValuation">NT$ 2,968,336</div>
-        <div class="metric-sub">
-          <span class="text-secondary">本金 NT$ 3,000,000</span>
-        </div>
-      </div>
-
-      <div class="metric-card emerald">
-        <div class="metric-header">
-          <span class="metric-label">累積配息收益</span>
-          <div class="metric-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-        </div>
-        <div class="metric-value text-emerald" id="totalDividends">NT$ 14,692</div>
-        <div class="metric-sub">
-          <span class="text-emerald"><i class="fa-solid fa-arrow-trend-up"></i> 帳戶 1 (2318) 現金配息</span>
-        </div>
-      </div>
-
-      <div class="metric-card cyan">
-        <div class="metric-header">
-          <span class="metric-label">帳戶扣款總費用</span>
-          <div class="metric-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-        </div>
-        <div class="metric-value text-cyan" id="totalDeductions">NT$ 12,550</div>
-        <div class="metric-sub">
-          <span class="text-secondary">保單管理費與保險成本 (9筆)</span>
-        </div>
-      </div>
-
-      <div class="metric-card rose">
-        <div class="metric-header">
-          <span class="metric-label">含息淨損益 (含配息減費用)</span>
-          <div class="metric-icon"><i class="fa-solid fa-chart-line"></i></div>
-        </div>
-        <div class="metric-value text-rose" id="netIncomeVal">-NT$ 16,972</div>
-        <div class="metric-sub text-rose" id="netIncomeRate">
-          <i class="fa-solid fa-arrow-trend-down"></i> -0.85% 總含息報酬
-        </div>
+        <a href="https://github.com/garfiwang/fund-tracker/blob/main/五檔中國地產國企新基金投資研究報告.md" target="_blank" class="nav-btn" style="background: #0284c7; color: white; border: none; font-weight: 700; padding: 10px 16px;">
+          <i class="fa-solid fa-book-open"></i> 線上閱讀五檔地產國企 Markdown 研報
+        </a>
       </div>
     </section>
 
-    <!-- Main Visual Charts Section -->
-    <section class="dashboard-grid">
-      <div class="glass-panel">
-        <div class="panel-header">
-          <h2 class="panel-title"><i class="fa-solid fa-chart-column"></i> 帳戶資產估值與累積配息對比</h2>
-          <span class="text-muted" style="font-size: 0.82rem;">數據比較 (TWD)</span>
-        </div>
-        <div class="chart-container">
-          <canvas id="comparisonChart"></canvas>
-        </div>
-      </div>
-
-      <div class="glass-panel">
-        <div class="panel-header">
-          <h2 class="panel-title"><i class="fa-solid fa-chart-pie"></i> 資產配置比重</h2>
-          <span class="text-muted" style="font-size: 0.82rem;">持股與現金</span>
-        </div>
-        <div class="chart-container">
-          <canvas id="allocationChart"></canvas>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- Detailed Accounts Section -->
-    <h2 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 16px; color: var(--text-primary);">
-      <i class="fa-solid fa-wallet" style="color: var(--color-indigo); margin-right: 8px;"></i>帳戶個別明細與配置
-    </h2>
-
-    <section class="accounts-comparison-grid">
-      <!-- Account 1 Card -->
-      <div class="account-card">
-        <div class="account-card-header">
-          <div>
-            <div class="account-name">帳戶 1 <span class="account-id">(代號: 2318)</span></div>
-            <div class="account-valuation-big" id="acc1Valuation">$1,968,336</div>
-          </div>
-          <span class="account-tag">保單投資帳戶</span>
-        </div>
-
-        <div class="account-details-list">
-          <div class="detail-row">
-            <span class="detail-label">初始投入本金</span>
-            <span class="detail-value">$2,000,000 TWD</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">主要持股標的</span>
-            <span class="detail-value">
-              <a href="fund_research.html" style="color: var(--color-indigo); text-decoration: underline; font-weight: 700;" title="點擊查看標的基金詳細研究報告與30天淨值">
-                柏瑞多重資產特別收益-B <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.72rem;"></i>
-              </a>
-            </span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">持股單位數 / 估算淨值</span>
-            <span class="detail-value">295,073.88 單位 / $6.6707</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">累積配息收益</span>
-            <span class="detail-value text-emerald">+$14,692 TWD</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">累積扣款費用</span>
-            <span class="detail-value text-rose">-$12,550 TWD</span>
-          </div>
-        </div>
-
-        <div class="insurance-banner">
-          <div class="insurance-title"><i class="fa-solid fa-shield-halved"></i> 附帶壽險保單保障摘要</div>
-          <div class="insurance-grid">
-            <div>基本保額: <strong>$2,800,000</strong></div>
-            <div>身故保險金: <strong>$2,785,308</strong></div>
-            <div>首期投入: <strong>2026/06/29</strong></div>
-            <div>保單狀態: <strong>正常生效</strong></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Account 2 Card -->
-      <div class="account-card">
-        <div class="account-card-header">
-          <div>
-            <div class="account-name">帳戶 2 <span class="account-id">(代號: 9318)</span></div>
-            <div class="account-valuation-big" id="acc2Valuation">$1,000,000</div>
-          </div>
-          <span class="account-tag acc2">現金/待配置</span>
-        </div>
-
-        <div class="account-details-list">
-          <div class="detail-row">
-            <span class="detail-label">初始投入本金</span>
-            <span class="detail-value">$1,000,000 TWD</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">主要持股標的</span>
-            <span class="detail-value text-muted">現金（尚未建倉）</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">生效/啟動日期</span>
-            <span class="detail-value">2026/06/30</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">累積配息收益</span>
-            <span class="detail-value text-secondary">$0 TWD</span>
-          </div>
-          <div class="detail-row">
-            <span class="detail-label">累積扣款費用</span>
-            <span class="detail-value text-secondary">$0 TWD</span>
-          </div>
-        </div>
-
-        <div class="insurance-banner" style="background: #f8fafc; border-color: #e2e8f0;">
-          <div class="insurance-title" style="color: var(--text-secondary);"><i class="fa-solid fa-info-circle"></i> 帳戶說明</div>
-          <div style="font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;">
-            目前儲備資金 $1,000,000 TWD 於獨立帳戶，隨時可進行新基金標的配置或投資建倉。
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Transactions and Fees History Log -->
-    <section class="glass-panel">
+    <!-- Comparative Matrix Table Section -->
+    <section class="glass-panel" style="margin-bottom: 24px;">
       <div class="panel-header">
-        <h2 class="panel-title"><i class="fa-solid fa-list-check"></i> 操作與交易明細紀錄</h2>
+        <h2 class="panel-title"><i class="fa-solid fa-table-list"></i> 5 檔追蹤基金綜合對比表</h2>
       </div>
-
-      <div class="filter-bar">
-        <div class="search-input-group">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input type="text" id="searchInput" class="search-input" placeholder="搜尋日期、標的名稱、費用項目...">
-        </div>
-        <div class="filter-pills">
-          <button class="filter-btn active" data-filter="all">全部紀錄</button>
-          <button class="filter-btn" data-filter="申購">申購紀錄</button>
-          <button class="filter-btn" data-filter="配息">配息紀錄</button>
-          <button class="filter-btn" data-filter="扣款">扣款費用</button>
-        </div>
-      </div>
-
       <div class="table-wrapper">
-        <table class="custom-table" id="txTable">
+        <table class="custom-table">
           <thead>
             <tr>
-              <th>交易日期</th>
-              <th>帳戶</th>
-              <th>交易類別</th>
-              <th>項目 / 投資標的</th>
-              <th>單位數 / 摘要</th>
-              <th>單價 / 每單位配息</th>
-              <th>總金額 (TWD)</th>
+              <th>基金全稱 / 代碼</th>
+              <th>核備管道</th>
+              <th>風險評級</th>
+              <th>最新淨值 (2026/08/17)</th>
+              <th>核心國有地產與基建標的</th>
+              <th>主要投資策略與特色</th>
             </tr>
           </thead>
-          <tbody id="txTableBody">
-            <!-- Dynamic Javascript Row Injection -->
+          <tbody>
+            <tr>
+              <td><strong>滙豐環球投資基金 - 中國股票</strong><br><span class="text-muted">LU0039216972</span></td>
+              <td><span class="account-tag" style="background: #e0f2fe; color: #0369a1;">境外基金觀測站</span></td>
+              <td><strong style="color: #e11d48;">RR5 (高風險)</strong></td>
+              <td><strong>54.15 USD</strong></td>
+              <td>華潤置地 (3.8%)<br>中國海外發展 (2.5%)</td>
+              <td>央企地產旗艦 + 萬象城商業地產雙驅動</td>
+            </tr>
+            <tr>
+              <td><strong>富達基金 - 中國焦點基金</strong><br><span class="text-muted">LU0173614495</span></td>
+              <td><span class="account-tag" style="background: #dcfce7; color: #15803d;">境外基金觀測站</span></td>
+              <td><strong style="color: #d97706;">RR4 / RR5</strong></td>
+              <td><strong>65.05 USD</strong></td>
+              <td>中國海外發展 (2.7%)<br>華潤置地 (2.1%)</td>
+              <td>Value 逆向價值投資，避開高槓桿民營房企</td>
+            </tr>
+            <tr>
+              <td><strong>復華中國基礎建設基金</strong><br><span class="text-muted">TW000T0623B0</span></td>
+              <td><span class="account-tag" style="background: #fef3c7; color: #b45309;">國內投信發行</span></td>
+              <td><strong style="color: #d97706;">RR4 (中高風險)</strong></td>
+              <td><strong>11.5000 TWD</strong></td>
+              <td>保利發展 (4.2%)<br>中國建築 (5.1%)<br>華潤置地 (3.6%)</td>
+              <td>100% 鎖定 A/港股城鎮化與新舊基建龍頭</td>
+            </tr>
+            <tr>
+              <td><strong>摩根中國基金</strong><br><span class="text-muted">LU0210526637</span></td>
+              <td><span class="account-tag" style="background: #e0f2fe; color: #0369a1;">境外基金觀測站</span></td>
+              <td><strong style="color: #e11d48;">RR5 (高風險)</strong></td>
+              <td><strong>70.35 USD</strong></td>
+              <td>華潤置地 (3.2%)<br>中國海外發展 (2.3%)</td>
+              <td>大盤品質成長策略，地產持股作為防禦分紅</td>
+            </tr>
+            <tr>
+              <td><strong>中國信託恒生中國高股息ETF基金</strong><br><span class="text-muted">00882</span></td>
+              <td><span class="account-tag" style="background: #fcf4ff; color: #7e22ce;">臺股上市 ETF</span></td>
+              <td><strong style="color: #d97706;">RR4 / RR5</strong></td>
+              <td><strong>11.9200 TWD</strong></td>
+              <td>華潤置地 (3.2%)<br>中國海外發展 (2.6%)<br>越秀地產 (1.8%)</td>
+              <td>高股息央國企成分股，兼具高收益與地產央企重組紅利</td>
+            </tr>
           </tbody>
         </table>
       </div>
     </section>
 
+    <!-- Nav Trend Chart Section -->
+    <section class="glass-panel" style="margin-bottom: 24px;">
+      <div class="panel-header">
+        <h2 class="panel-title"><i class="fa-solid fa-chart-line"></i> 近 30 天淨值走勢與比較圖表</h2>
+      </div>
+      <div style="height: 320px; position: relative;">
+        <canvas id="navTrendChart"></canvas>
+      </div>
+    </section>
+
+    <!-- Fund Details Cards Grid Section -->
+    <section style="margin-bottom: 24px;">
+      <div style="margin-bottom: 16px;">
+        <h2 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary);">
+          <i class="fa-solid fa-folder-open" style="color: #0284c7; margin-right: 6px;"></i> 5 檔追蹤基金詳細持股與配置剖析
+        </h2>
+      </div>
+      <div class="fund-grid" id="fundGridContainer">
+        <!-- JS 動態渲染 5 檔基金卡片 -->
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
-      <p>孫晴盈 - 基金理財帳戶管理系統 &copy; 2026 | 發布於 <a href="https://github.com/garfiwang/fund-management-sun-qingying" target="_blank">GitHub Repository</a></p>
+      <p>基金追蹤 · 5 檔中國地產國企與高股息基金儀錶板 &copy; 2026 | 發布於 <a href="https://github.com/garfiwang/fund-tracker" target="_blank">GitHub Repository</a></p>
     </footer>
 
   </div>
 
-  <!-- Main Application Logic Script -->
   <script src="app.js"></script>
 </body>
 </html>
