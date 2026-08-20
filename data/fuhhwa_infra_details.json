@@ -4,21 +4,21 @@
   "isin": "TW000T0623B0",
   "currency": "TWD",
   "risk_level": "RR4",
-  "dividend_frequency": "不配息/累積型",
-  "latest_nav": 11.5,
-  "latest_nav_date": "2026-08-17",
+  "dividend_frequency": "累積型/不配息",
+  "latest_nav": 11.6800,
+  "latest_nav_date": "2026-08-19",
   "top_property_soe_holdings": [
     {
       "rank": 1,
-      "name": "中國建築 (China State Construction 601668.SH)",
-      "type": "央企巨頭/房建營建",
-      "weight": "5.10%"
+      "name": "保利發展 (Poly Developments 600048.SH)",
+      "type": "央企地產銷售第一龍頭",
+      "weight": "4.20%"
     },
     {
       "rank": 2,
-      "name": "保利發展 (Poly Developments 600048.SH)",
-      "type": "央企龍頭地產商",
-      "weight": "4.20%"
+      "name": "中國建築 (China State Construction 601668.SH)",
+      "type": "全球最大房建營建央企",
+      "weight": "5.10%"
     },
     {
       "rank": 3,
@@ -37,18 +37,18 @@
     {
       "rank": 1,
       "name": "長江電力 (China Yangtze Power 600900.SH)",
-      "weight": "4.50%"
+      "weight": "7.20%"
     },
     {
       "rank": 2,
       "name": "大秦鐵路 (Daqin Railway 601006.SH)",
-      "weight": "3.80%"
+      "weight": "4.80%"
     },
     {
       "rank": 3,
       "name": "中國中車 (CRRC Corporation 601766.SH)",
-      "weight": "3.20%"
+      "weight": "4.10%"
     }
   ],
-  "china_soes_property_strategy": "100% 聚焦中國新舊基建與保障房城鎮化建設，為 4 檔基金中中國國有不動產與營建央企集中度最高者。"
+  "china_soes_property_strategy": "國內投信發行，100% 聚焦中國「城鎮化」與新舊基建，高純度鎖定 A/港股央國企地產與營建旗艦。"
 }

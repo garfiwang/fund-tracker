@@ -1,12 +1,12 @@
 {
-  "fund_code": "JPMORGAN_CN_FUND",
-  "fund_name": "摩根中國基金 (JPMorgan China Fund / JPMorgan Funds - China Fund)",
+  "fund_code": "JPMORGAN_CN",
+  "fund_name": "摩根中國基金 (JPMorgan Funds - China Fund)",
   "isin": "LU0210526637",
   "currency": "USD",
   "risk_level": "RR5",
   "dividend_frequency": "累積型/不配息",
-  "latest_nav": 70.35,
-  "latest_nav_date": "2026-08-17",
+  "latest_nav": 51.35,
+  "latest_nav_date": "2026-08-19",
   "top_property_soe_holdings": [
     {
       "rank": 1,
@@ -40,8 +40,8 @@
     {
       "rank": 4,
       "name": "中國平安保險 (Ping An Insurance 2318.HK)",
-      "weight": "3.60%"
+      "weight": "3.90%"
     }
   ],
-  "china_soes_property_strategy": "採用大盤高品質成長策略，房地產領域精選防禦屬性與現金流優異之國資背景地產龍頭（華潤置地與中國海外發展）。"
+  "china_soes_property_strategy": "高品質增長 (Quality Growth) 策略，精選地產國有巨頭，作為投組防禦與分紅資產。"
 }

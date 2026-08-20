@@ -1,12 +1,12 @@
 {
-  "fund_code": "00882",
+  "fund_code": "CTBC_00882",
   "fund_name": "中國信託恒生中國高股息ETF基金 (CTBC Hang Seng China High Dividend Yield ETF)",
-  "isin": "TW0000088204",
+  "isin": "00882",
   "currency": "TWD",
-  "risk_level": "RR4 / RR5",
-  "dividend_frequency": "半年配息 (1月/7月)",
-  "latest_nav": 11.92,
-  "latest_nav_date": "2026-08-17",
+  "risk_level": "RR4/RR5",
+  "dividend_frequency": "半年配息",
+  "latest_nav": 14.9600,
+  "latest_nav_date": "2026-08-19",
   "top_property_soe_holdings": [
     {
       "rank": 1,
@@ -23,7 +23,7 @@
     {
       "rank": 3,
       "name": "越秀地產 (Yuexiu Property 0123.HK)",
-      "type": "廣州市國資委地方國企",
+      "type": "廣州國資委地方國企地產",
       "weight": "1.80%"
     }
   ],
@@ -35,19 +35,14 @@
     },
     {
       "rank": 2,
-      "name": "中國神華 (China Shenhua Energy 1088.HK)",
+      "name": "中國神華 (China Shenhua 1088.HK)",
       "weight": "7.20%"
     },
     {
       "rank": 3,
-      "name": "建設銀行 (China Construction Bank 0939.HK)",
+      "name": "中國建設銀行 (China Construction Bank 0939.HK)",
       "weight": "6.80%"
-    },
-    {
-      "rank": 4,
-      "name": "中信銀行 (China CITIC Bank 0998.HK)",
-      "weight": "5.50%"
     }
   ],
-  "china_soes_property_strategy": "追蹤恒生中國高股息率指數，高比例配置資產負債表堅實之央國企地產、金融與能源龍頭，具備強勁現金流與高股息殖利率防禦保護。"
+  "china_soes_property_strategy": "恒生中國高股息指數成分股，高比例鎖定資產負債表堅實之央國企龍頭，兼具高股息保護與地產央國企重組紅利。"
 }

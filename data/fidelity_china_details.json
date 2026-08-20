@@ -3,10 +3,10 @@
   "fund_name": "富達基金 - 中國焦點基金 (Fidelity Funds - China Focus Fund)",
   "isin": "LU0173614495",
   "currency": "USD",
-  "risk_level": "RR4 / RR5",
-  "dividend_frequency": "累積型/年配息",
-  "latest_nav": 65.05,
-  "latest_nav_date": "2026-08-17",
+  "risk_level": "RR4/RR5",
+  "dividend_frequency": "累積型/不配息",
+  "latest_nav": 68.44,
+  "latest_nav_date": "2026-08-18",
   "top_property_soe_holdings": [
     {
       "rank": 1,
@@ -30,18 +30,18 @@
     {
       "rank": 2,
       "name": "中國建設銀行 (China Construction Bank 0939.HK)",
-      "weight": "6.20%"
+      "weight": "6.80%"
     },
     {
       "rank": 3,
       "name": "招商銀行 (China Merchants Bank 3968.HK)",
-      "weight": "4.80%"
+      "weight": "5.20%"
     },
     {
       "rank": 4,
-      "name": "中國神華 (China Shenhua Energy 1088.HK)",
-      "weight": "3.90%"
+      "name": "中國神華 (China Shenhua 1088.HK)",
+      "weight": "4.30%"
     }
   ],
-  "china_soes_property_strategy": "採用 Value 逆向價值投資策略，完全摒棄負債率高之民營房企，專注佈局資產負債表堅實之中國海外發展與華潤置地，兼具防禦性與股息保護。"
+  "china_soes_property_strategy": "採用 Value 價值投資法，堅持不動產地產股僅配置防禦力最強之央企龍頭，絕不安裝高負債民營房企。"
 }
