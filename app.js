@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // 更新最後更新時間
     const lastUpdateEl = document.getElementById('lastUpdatedText');
     if (lastUpdateEl) {
-      lastUpdateEl.textContent = `最新淨值日期: ${hsbc.latest_nav_date || '2026-08-17'}`;
+      lastUpdateEl.textContent = `最新淨值日期: ${hsbc.latest_nav_date || '2026-08-20'}`;
     }
 
     // 渲染基金動態卡片
@@ -85,7 +85,7 @@ function renderNavChart() {
   const ctx = document.getElementById('navTrendChart');
   if (!ctx) return;
 
-  const labels = ['07/20', '07/25', '07/30', '08/05', '08/10', '08/17'];
+  const labels = ['07/20', '07/25', '07/30', '08/05', '08/12', '08/20'];
 
   new Chart(ctx, {
     type: 'line',
@@ -94,7 +94,7 @@ function renderNavChart() {
       datasets: [
         {
           label: '復華中國基礎建設 (TWD)',
-          data: [11.12, 11.20, 11.35, 11.40, 11.48, 11.50],
+          data: [11.12, 11.20, 11.35, 11.40, 11.50, 11.68],
           borderColor: '#0284c7',
           backgroundColor: 'rgba(2, 132, 199, 0.1)',
           fill: true,
@@ -102,7 +102,7 @@ function renderNavChart() {
         },
         {
           label: '00882 中信中國高股息 (TWD)',
-          data: [11.45, 11.58, 11.70, 11.82, 11.88, 11.92],
+          data: [11.45, 11.58, 11.70, 11.82, 11.92, 14.96],
           borderColor: '#16a34a',
           backgroundColor: 'rgba(22, 163, 74, 0.1)',
           fill: true,
@@ -110,19 +110,19 @@ function renderNavChart() {
         },
         {
           label: '滙豐環球中國股票 (USD)',
-          data: [52.10, 52.80, 53.20, 53.60, 54.00, 54.15],
+          data: [52.10, 52.80, 53.20, 53.60, 54.15, 55.20],
           borderColor: '#4f46e5',
           tension: 0.3
         },
         {
           label: '富達中國焦點 (USD)',
-          data: [63.20, 63.80, 64.10, 64.50, 64.90, 65.05],
+          data: [63.20, 63.80, 64.10, 64.50, 65.05, 68.44],
           borderColor: '#d97706',
           tension: 0.3
         },
         {
           label: '摩根中國基金 (USD)',
-          data: [68.00, 68.50, 69.10, 69.80, 70.10, 70.35],
+          data: [48.50, 49.20, 49.80, 50.30, 50.99, 51.35],
           borderColor: '#dc2626',
           tension: 0.3
         }

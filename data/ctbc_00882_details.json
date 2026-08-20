@@ -1,12 +1,12 @@
 {
   "fund_code": "CTBC_00882",
   "fund_name": "中國信託恒生中國高股息ETF基金 (CTBC Hang Seng China High Dividend Yield ETF)",
-  "isin": "00882",
+  "isin": "TW0000088204",
   "currency": "TWD",
   "risk_level": "RR4/RR5",
-  "dividend_frequency": "半年配息",
+  "dividend_frequency": "半年配息 (1月/7月)",
   "latest_nav": 14.9600,
-  "latest_nav_date": "2026-08-19",
+  "latest_nav_date": "2026-08-20",
   "top_property_soe_holdings": [
     {
       "rank": 1,
@@ -44,5 +44,5 @@
       "weight": "6.80%"
     }
   ],
-  "china_soes_property_strategy": "恒生中國高股息指數成分股，高比例鎖定資產負債表堅實之央國企龍頭，兼具高股息保護與地產央國企重組紅利。"
+  "china_soes_property_strategy": "追蹤恒生中國高股息率指數，半年配息(1月/7月)，高比例鎖定資產負債表堅實之央國企龍頭，兼具高股息保護與地產央企重組紅利。"
 }
