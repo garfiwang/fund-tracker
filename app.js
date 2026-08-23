@@ -1,19 +1,20 @@
 // 基金追蹤專案 - 5 檔中國地產國企與高股息基金專題腳本
 
 document.addEventListener('DOMContentLoaded', async () => {
-  console.log("初始化 5 檔中國地產國企與高股息基金追蹤儀錶板...");
+  console.log("初始化 6 檔地產國企/高股息與實質收息基金追蹤儀錶板...");
 
   try {
-    // 載入 5 檔基金 JSON 資料
-    const [hsbc, fidelity, fuhhwa, jpmorgan, ctbc] = await Promise.all([
+    // 載入 6 檔基金 JSON 資料
+    const [hsbc, fidelity, fuhhwa, jpmorgan, ctbc, amundiReal] = await Promise.all([
       fetch('data/hsbc_china_details.json').then(res => res.json()),
       fetch('data/fidelity_china_details.json').then(res => res.json()),
       fetch('data/fuhhwa_infra_details.json').then(res => res.json()),
       fetch('data/jpmorgan_china_details.json').then(res => res.json()),
-      fetch('data/ctbc_00882_details.json').then(res => res.json())
+      fetch('data/ctbc_00882_details.json').then(res => res.json()),
+      fetch('data/amundi_real_income_details.json').then(res => res.json())
     ]);
 
-    const funds = [hsbc, fidelity, fuhhwa, jpmorgan, ctbc];
+    const funds = [hsbc, fidelity, fuhhwa, jpmorgan, ctbc, amundiReal];
 
     // 更新最後更新時間
     const lastUpdateEl = document.getElementById('lastUpdatedText');
@@ -42,7 +43,7 @@ function renderFundCards(funds) {
     const riskBadgeClass = fund.risk_level.includes('RR5') ? 'badge-rr5' : 'badge-rr4';
 
     const propHoldingsList = (fund.top_property_soe_holdings || []).map(h => 
-      `<li><strong>${h.name}</strong> (${h.type || '地產/基建國企'}): <span class="highlight">${h.weight}</span></li>`
+      `<li><strong>${h.name}</strong> (${h.type || '地產/基建/實質資產'}): <span class="highlight">${h.weight}</span></li>`
     ).join('');
 
     const otherHoldingsList = (fund.top_other_holdings || []).map(h => 
@@ -65,7 +66,7 @@ function renderFundCards(funds) {
         </div>
 
         <div class="fund-card-body">
-          <div class="section-title"><i class="fa-solid fa-building-flag"></i> 核心國有地產與基建持股</div>
+          <div class="section-title"><i class="fa-solid fa-building-flag"></i> 核心地產/基建與實質資產持股</div>
           <ul class="holdings-list">${propHoldingsList}</ul>
 
           <div class="section-title" style="margin-top: 12px;"><i class="fa-solid fa-chart-pie"></i> 其他前大重倉持股</div>
@@ -92,6 +93,14 @@ function renderNavChart() {
     data: {
       labels: labels,
       datasets: [
+        {
+          label: '東方匯理實質收息多重資產 (TWD)',
+          data: [9.82, 9.85, 9.88, 9.90, 9.93, 9.97],
+          borderColor: '#9333ea',
+          backgroundColor: 'rgba(147, 51, 234, 0.1)',
+          fill: true,
+          tension: 0.3
+        },
         {
           label: '復華中國基礎建設 (TWD)',
           data: [11.12, 11.20, 11.35, 11.40, 11.50, 11.68],
