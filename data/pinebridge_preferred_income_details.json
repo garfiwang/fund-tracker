@@ -1,0 +1,25 @@
+{
+  "fund_code": "PINEBRIDGE_PREFERRED_INCOME",
+  "fund_name": "柏瑞多重資產特別收益基金-B類型(新台幣)",
+  "isin_b": "TW000T2125B8",
+  "isin_a": "TW000T2125A0",
+  "currency": "TWD",
+  "risk_level": "RR3",
+  "dividend_frequency": "B類型 月配息 (配息可能來自本金)",
+  "latest_nav": 6.6403,
+  "latest_nav_date": "2026-08-19",
+  "estimated_annual_yield": "6.60%",
+  "asset_allocation": [
+    { "category": "高評級金融與公用事業特別股", "weight": "40.0%" },
+    { "category": "投資級與高收益債券", "weight": "45.0%" },
+    { "category": "可轉換公司債 / 多重收益資產", "weight": "15.0%" }
+  ],
+  "top_holdings": [
+    { "rank": 1, "name": "JPMorgan Chase Preferred (摩根大通特別股)", "type": "金融特別股", "weight": "4.50%" },
+    { "rank": 2, "name": "Bank of America Preferred (美國銀行特別股)", "type": "金融特別股", "weight": "4.10%" },
+    { "rank": 3, "name": "Wells Fargo Preferred (富國銀行特別股)", "type": "金融特別股", "weight": "3.80%" },
+    { "rank": 4, "name": "Citigroup Preferred (花旗集團特別股)", "type": "金融特別股", "weight": "3.20%" },
+    { "rank": 5, "name": "NextEra Energy Preferred (佛羅里達電力優先股)", "type": "公用事業特別股", "weight": "3.00%" }
+  ],
+  "strategy_description": "結合「特別股優先受償性與高股息 + 投資級債穩定票息 + 收益資產」三大黃金配置。特別股兼具股票的優先分派權與債券低波動特色，非常適合追求穩定月配息與波動極低的投資人。"
+}

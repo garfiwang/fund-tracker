@@ -5,22 +5,22 @@
 
 let portfolioData = null;
 let allianzData = null;
-let ctbcData = null;
+let pinebridgeData = null;
 let portfolioChart = null;
 let navChart = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {
     // 1. Fetch JSON Data
-    const [portfolioRes, allianzRes, ctbcRes] = await Promise.all([
+    const [portfolioRes, allianzRes, pbRes] = await Promise.all([
       fetch('data/wang_portfolio.json'),
       fetch('data/allianz_income_growth_details.json'),
-      fetch('data/ctbc_tech_trend_details.json')
+      fetch('data/pinebridge_preferred_income_details.json')
     ]);
 
     portfolioData = await portfolioRes.json();
     allianzData = await allianzRes.json();
-    ctbcData = await ctbcRes.json();
+    pinebridgeData = await pbRes.json();
 
     // 2. Render Overview Cards & Data
     renderKPIs();
@@ -42,40 +42,40 @@ document.addEventListener('DOMContentLoaded', async () => {
  * Render Top KPI Cards
  */
 function renderKPIs(allianzWeight = 0.50) {
-  const ctbcWeight = 1.0 - allianzWeight;
+  const pbWeight = 1.0 - allianzWeight;
   const initialCapital = portfolioData.initial_capital_twd; // 3,000,000
   
   const allianzHolding = portfolioData.holdings.find(h => h.fund_code === 'ALLIANZ_INCOME_GROWTH');
-  const ctbcHolding = portfolioData.holdings.find(h => h.fund_code === 'CTBC_TECH_TREND');
+  const pbHolding = portfolioData.holdings.find(h => h.fund_code === 'PINEBRIDGE_PREFERRED_INCOME');
 
   // Calculate under current weights
   const allianzAllocated = initialCapital * allianzWeight;
-  const ctbcAllocated = initialCapital * ctbcWeight;
+  const pbAllocated = initialCapital * pbWeight;
 
   const allianzUnits = allianzAllocated / allianzHolding.purchase_nav;
-  const ctbcUnits = ctbcAllocated / ctbcHolding.purchase_nav;
+  const pbUnits = pbAllocated / pbHolding.purchase_nav;
 
   const allianzCurrValue = allianzUnits * allianzHolding.latest_nav;
-  const ctbcCurrValue = ctbcUnits * ctbcHolding.latest_nav;
+  const pbCurrValue = pbUnits * pbHolding.latest_nav;
 
-  const totalCurrentValue = allianzCurrValue + ctbcCurrValue;
+  const totalCurrentValue = allianzCurrValue + pbCurrValue;
   const totalCapitalGain = totalCurrentValue - initialCapital;
   const capitalGainReturn = (totalCapitalGain / initialCapital) * 100;
 
   // Dividend estimation (based on months elapsed: 20 months of dividends)
   const monthsElapsed = 20;
   const allianzMonthlyDivRate = allianzHolding.monthly_yield_rate; // 0.0065
-  const ctbcMonthlyDivRate = ctbcHolding.monthly_yield_rate; // 0.0055
+  const pbMonthlyDivRate = pbHolding.monthly_yield_rate; // 0.0055
 
   const allianzTotalDiv = allianzAllocated * allianzMonthlyDivRate * monthsElapsed;
-  const ctbcTotalDiv = ctbcAllocated * ctbcMonthlyDivRate * monthsElapsed;
-  const totalDividendReceived = allianzTotalDiv + ctbcTotalDiv;
+  const pbTotalDiv = pbAllocated * pbMonthlyDivRate * monthsElapsed;
+  const totalDividendReceived = allianzTotalDiv + pbTotalDiv;
 
   const totalReturnValue = totalCapitalGain + totalDividendReceived;
   const totalROI = (totalReturnValue / initialCapital) * 100;
 
   // Monthly & Annualized Estimated Cash Flow
-  const monthlyEstDividend = (allianzCurrValue * allianzMonthlyDivRate) + (ctbcCurrValue * ctbcMonthlyDivRate);
+  const monthlyEstDividend = (allianzCurrValue * allianzMonthlyDivRate) + (pbCurrValue * pbMonthlyDivRate);
   const annualEstDividend = monthlyEstDividend * 12;
 
   // Update UI Elements
@@ -92,7 +92,7 @@ function renderKPIs(allianzWeight = 0.50) {
 
   // Update Allocation breakdown labels
   document.getElementById('allianzAllocText').textContent = `NT$ ${Math.round(allianzCurrValue).toLocaleString()} (${(allianzWeight * 100).toFixed(0)}%)`;
-  document.getElementById('ctbcAllocText').textContent = `NT$ ${Math.round(ctbcCurrValue).toLocaleString()} (${(ctbcWeight * 100).toFixed(0)}%)`;
+  document.getElementById('pbAllocText').textContent = `NT$ ${Math.round(pbCurrValue).toLocaleString()} (${(pbWeight * 100).toFixed(0)}%)`;
 }
 
 /**
@@ -101,16 +101,16 @@ function renderKPIs(allianzWeight = 0.50) {
 function initWeightController() {
   const slider = document.getElementById('allianzSlider');
   const allianzValLabel = document.getElementById('allianzSliderVal');
-  const ctbcValLabel = document.getElementById('ctbcSliderVal');
+  const pbValLabel = document.getElementById('pbSliderVal');
 
   if (!slider) return;
 
   slider.addEventListener('input', (e) => {
     const allianzPct = parseInt(e.target.value, 10);
-    const ctbcPct = 100 - allianzPct;
+    const pbPct = 100 - allianzPct;
 
     allianzValLabel.textContent = `${allianzPct}%`;
-    ctbcValLabel.textContent = `${ctbcPct}%`;
+    pbValLabel.textContent = `${pbPct}%`;
 
     const allianzWeight = allianzPct / 100;
     renderKPIs(allianzWeight);
@@ -134,13 +134,13 @@ function renderFundCards() {
     </li>
   `).join('');
 
-  // CTBC Card
-  document.getElementById('ctbcNav').textContent = `${ctbcData.latest_nav.toFixed(4)} TWD`;
-  document.getElementById('ctbcNavDate').textContent = `淨值日期: ${ctbcData.latest_nav_date}`;
-  document.getElementById('ctbcYield').textContent = ctbcData.estimated_annual_yield;
+  // PineBridge Card
+  document.getElementById('pbNav').textContent = `${pinebridgeData.latest_nav.toFixed(4)} TWD`;
+  document.getElementById('pbNavDate').textContent = `淨值日期: ${pinebridgeData.latest_nav_date}`;
+  document.getElementById('pbYield').textContent = pinebridgeData.estimated_annual_yield;
 
-  const ctbcHoldingsList = document.getElementById('ctbcHoldingsList');
-  ctbcHoldingsList.innerHTML = ctbcData.top_holdings.map(h => `
+  const pbHoldingsList = document.getElementById('pbHoldingsList');
+  pbHoldingsList.innerHTML = pinebridgeData.top_holdings.map(h => `
     <li style="margin-bottom: 6px; display: flex; justify-content: space-between;">
       <span><strong>${h.rank}. ${h.name}</strong> <span class="tag">${h.type}</span></span>
       <span class="highlight">${h.weight}</span>
@@ -241,7 +241,7 @@ function renderNavComparisonChart() {
 
   const labels = portfolioData.history.map(item => item.month);
   const allianzNavs = portfolioData.history.map(item => item.allianz_nav);
-  const ctbcNavs = portfolioData.history.map(item => item.ctbc_nav);
+  const pbNavs = portfolioData.history.map(item => item.pinebridge_nav);
 
   if (navChart) navChart.destroy();
 
@@ -259,9 +259,9 @@ function renderNavComparisonChart() {
           borderWidth: 2.5
         },
         {
-          label: '中國信託科技趨勢多重資產 (TWD)',
-          data: ctbcNavs,
-          borderColor: '#7c3aed',
+          label: '柏瑞多重資產特別收益-B (TWD)',
+          data: pbNavs,
+          borderColor: '#059669',
           backgroundColor: 'transparent',
           tension: 0.2,
           borderWidth: 2.5
@@ -283,8 +283,8 @@ function renderNavComparisonChart() {
       },
       scales: {
         y: {
-          suggestedMin: 8.8,
-          suggestedMax: 11.0,
+          suggestedMin: 6.0,
+          suggestedMax: 10.5,
           ticks: {
             callback: function(value) {
               return value.toFixed(2) + ' 元';
