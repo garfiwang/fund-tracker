@@ -25,4 +25,4 @@
 - 時間：2026-08-26 07:22
 - 更新者：Antigravity @ Mac
 - 最新進度：成功全面校正安聯與柏瑞兩大基金之官方歷史淨值與配息紀錄，全數部署更新至 GitHub Pages。
-- Git push：⏳ 待推送
+- Git push：✅ 已推 (`main`)
