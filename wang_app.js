@@ -58,21 +58,15 @@ function renderKPIs(allianzWeight = 0.50) {
   const allianzCurrValue = allianzUnits * allianzHolding.latest_nav;
   const pbCurrValue = pbUnits * pbHolding.latest_nav;
 
-  const totalCurrentValue = allianzCurrValue + pbCurrValue;
-  const totalCapitalGain = totalCurrentValue - initialCapital;
-  const capitalGainReturn = (totalCapitalGain / initialCapital) * 100;
+  const allianzTotalDiv = allianzHolding.total_dividend_twd; // 187,709.50
+  const pbTotalDiv = pbHolding.total_dividend_twd; // 198,360.22
 
-  // Dividend estimation (based on months elapsed: 20 months of dividends)
-  const monthsElapsed = 20;
-  const allianzMonthlyDivRate = allianzHolding.monthly_yield_rate; // 0.0065
-  const pbMonthlyDivRate = pbHolding.monthly_yield_rate; // 0.0055
+  const totalCurrentValue = allianzCurrValue + pbCurrValue; // 基金純總市值
+  const totalDividendReceived = allianzTotalDiv + pbTotalDiv; // 累計配息
+  const totalAssetValue = totalCurrentValue + totalDividendReceived; // 資產總值 (總市值 ＋ 累計配息)
 
-  const allianzTotalDiv = allianzAllocated * allianzMonthlyDivRate * monthsElapsed;
-  const pbTotalDiv = pbAllocated * pbMonthlyDivRate * monthsElapsed;
-  const totalDividendReceived = allianzTotalDiv + pbTotalDiv;
-
-  const totalReturnValue = totalCapitalGain + totalDividendReceived;
-  const totalROI = (totalReturnValue / initialCapital) * 100;
+  const netTotalProfit = totalAssetValue - initialCapital; // 淨獲利
+  const netTotalROI = (netTotalProfit / initialCapital) * 100; // 含息總 ROI
 
   // Monthly & Annualized Estimated Cash Flow (Direct Units * Per-Unit Dividend)
   const allianzLatestPerUnitDiv = 0.0590; // 最新每單位配息 (TWD)
@@ -83,12 +77,12 @@ function renderKPIs(allianzWeight = 0.50) {
 
   // Update UI Elements
   document.getElementById('initialCapitalText').textContent = `NT$ ${initialCapital.toLocaleString()}`;
-  document.getElementById('totalCurrentValueText').textContent = `NT$ ${Math.round(totalCurrentValue).toLocaleString()}`;
-  document.getElementById('capitalGainText').textContent = `${totalCapitalGain >= 0 ? '+' : ''}NT$ ${Math.round(totalCapitalGain).toLocaleString()} (${capitalGainReturn.toFixed(2)}%)`;
+  document.getElementById('totalCurrentValueText').textContent = `NT$ ${Math.round(totalAssetValue).toLocaleString()}`;
+  document.getElementById('capitalGainText').textContent = `市值 NT$ ${Math.round(totalCurrentValue).toLocaleString()} ＋ 配息 NT$ ${Math.round(totalDividendReceived).toLocaleString()} (${netTotalProfit >= 0 ? '+' : ''}NT$ ${Math.round(netTotalProfit).toLocaleString()} / ${netTotalROI.toFixed(2)}%)`;
   
   document.getElementById('totalDividendText').textContent = `NT$ ${Math.round(totalDividendReceived).toLocaleString()}`;
-  document.getElementById('totalROIText').textContent = `${totalROI >= 0 ? '+' : ''}${totalROI.toFixed(2)}%`;
-  document.getElementById('totalReturnAmountText').textContent = `獲利小計 +NT$ ${Math.round(totalReturnValue).toLocaleString()}`;
+  document.getElementById('totalROIText').textContent = `${netTotalROI >= 0 ? '+' : ''}${netTotalROI.toFixed(2)}%`;
+  document.getElementById('totalReturnAmountText').textContent = `獲利小計 +NT$ ${Math.round(netTotalProfit).toLocaleString()}`;
 
   document.getElementById('monthlyEstDivText').textContent = `NT$ ${Math.round(monthlyEstDividend).toLocaleString()} / 月`;
   document.getElementById('annualEstDivText').textContent = `預估年領 NT$ ${Math.round(annualEstDividend).toLocaleString()}`;
