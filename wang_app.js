@@ -74,8 +74,11 @@ function renderKPIs(allianzWeight = 0.50) {
   const totalReturnValue = totalCapitalGain + totalDividendReceived;
   const totalROI = (totalReturnValue / initialCapital) * 100;
 
-  // Monthly & Annualized Estimated Cash Flow
-  const monthlyEstDividend = (allianzCurrValue * allianzMonthlyDivRate) + (pbCurrValue * pbMonthlyDivRate);
+  // Monthly & Annualized Estimated Cash Flow (Direct Units * Per-Unit Dividend)
+  const allianzLatestPerUnitDiv = 0.0590; // 最新每單位配息 (TWD)
+  const pbLatestPerUnitDiv = 0.0500; // 最新每單位配息 (TWD)
+
+  const monthlyEstDividend = (allianzUnits * allianzLatestPerUnitDiv) + (pbUnits * pbLatestPerUnitDiv);
   const annualEstDividend = monthlyEstDividend * 12;
 
   // Update UI Elements
