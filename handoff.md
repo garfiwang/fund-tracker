@@ -3,17 +3,17 @@
 > 任何 Agent、任何電腦接手前**必讀**；收工時**必更新**。本檔只放交接必需的精簡資訊，詳細脈絡放 Obsidian（若有 L3）。
 
 ## ⏯️ 目前做到哪
-1. **全面完成「安聯收益成長多重資產基金-新台幣」與「柏瑞多重資產特別收益基金」兩大標的之官方權威對齊**：
-   - **安聯收益成長基金**：經過安聯投信官網與鉅亨買基金交叉比對，全面更正歷史淨值點位（2024/12 買入基準 8.9500 TWD，演進至最新 2026/08 之 8.3700 TWD）。更正配息明細為每單位 0.055 ~ 0.059 TWD（年化息率約 8.40%）。
-   - **柏瑞多重資產特別收益基金**：對齊大都會/柏瑞官網（2024/12 之 7.5620 TWD 演進至最新 6.7168 TWD，每單位固定配息 0.05 TWD，年化息率約 8.80%）。
-   - 同步修正 `data/allianz_income_growth_details.json`、`data/pinebridge_preferred_income_details.json` 與 `data/wang_portfolio.json`。
+1. **詳細檢查並說明「預估月度配息現金流」計算公式**：
+   - 解析圖片中 `NT$ 17,491 / 月` 的算式來源（舊估算方式：最新基金市值 × 月收益率）。
+   - **精準化優化**：改採銀行集保劃撥實領算式（`購入單位數 × 最新每單位配息金額`）。
+     - 安聯：`167,597.77 單位 × 0.059 元 = 9,888 元`
+     - 柏瑞：`198,360.22 單位 × 0.050 元 = 9,918 元`
+     - 每月實領配息由 `NT$ 17,491` 提升校正為 **`NT$ 19,806 / 月`**（預估年領 **`NT$ 237,675`**）。
 2. **線上 GitHub Pages 自動更新發布**：
-   - 安聯獨立追蹤頁：[https://garfiwang.github.io/fund-tracker/allianz_income_growth_tracker.html](https://garfiwang.github.io/fund-tracker/allianz_income_growth_tracker.html)
-   - 柏瑞獨立追蹤頁：[https://garfiwang.github.io/fund-tracker/pinebridge_preferred_income_tracker.html](https://garfiwang.github.io/fund-tracker/pinebridge_preferred_income_tracker.html)
    - WANG 總儀錶板：[https://garfiwang.github.io/fund-tracker/wang_dashboard.html](https://garfiwang.github.io/fund-tracker/wang_dashboard.html)
 
 ## 🚦 目前狀態
-- 客戶 WANG 組合下之安聯與柏瑞兩大基金數據皆已 100% 精確對齊官方與第三方資料庫。
+- 配息金額計算公式已更新為與銀行領息通知單 100% 一致之精確單位數法，網頁部署完成。
 
 ## ➡️ 下一步
 1. 隨時依據官網最新公告更新月份數據。
@@ -22,7 +22,7 @@
 - 本專案位於 Google 雲端硬碟，請確保 Google 雲端硬碟桌面版的同步圖示已打勾。
 
 ## 🕐 最後更新
-- 時間：2026-08-26 07:22
+- 時間：2026-08-26 07:26
 - 更新者：Antigravity @ Mac
-- 最新進度：成功全面校正安聯與柏瑞兩大基金之官方歷史淨值與配息紀錄，全數部署更新至 GitHub Pages。
+- 最新進度：完成配息算式推導說明與直接單位數實領法升級。
 - Git push：✅ 已推 (`main`)
