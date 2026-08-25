@@ -1,0 +1,25 @@
+{
+  "fund_code": "CTBC_TECH_TREND",
+  "fund_name": "中國信託科技趨勢多重資產基金-新台幣",
+  "isin_b": "TW000T2693B5",
+  "isin_a": "TW000T2693A9",
+  "currency": "TWD",
+  "risk_level": "RR4",
+  "dividend_frequency": "B類型 月配息",
+  "latest_nav": 10.4500,
+  "latest_nav_date": "2026-08-21",
+  "estimated_annual_yield": "6.60%",
+  "asset_allocation": [
+    { "category": "全球科技股票/AI領頭羊", "weight": "55.0%" },
+    { "category": "科技投資級與高收益債券", "weight": "30.0%" },
+    { "category": "科技與數據中心 REITs / 收益資產", "weight": "15.0%" }
+  ],
+  "top_holdings": [
+    { "rank": 1, "name": "NVIDIA Corp (輝達)", "type": "AI晶片龍頭", "weight": "6.20%" },
+    { "rank": 2, "name": "Broadcom Inc (博通)", "type": "網通與半導體", "weight": "5.10%" },
+    { "rank": 3, "name": "Microsoft Corp (微軟)", "type": "雲端與AI生態", "weight": "4.80%" },
+    { "rank": 4, "name": "Apple Inc (蘋果)", "type": "消費電子與端側AI", "weight": "4.20%" },
+    { "rank": 5, "name": "Taiwan Semiconductor ADR (台積電)", "type": "晶圓代工霸主", "weight": "4.00%" }
+  ],
+  "strategy_description": "專注全球科技巨頭與 AI 破局者，結合「科技股票強勁資本利得 + 科技債固定收益 + 數據中心/電信塔 REITs 現金流」，降低純科技股之極端波動，極致發揮科技產業爆發力與穩健配息優勢。"
+}

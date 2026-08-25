@@ -19,7 +19,8 @@
   - [x] 刪除 Sun 舊帳戶、精選7檔基金與舊報告等無關檔案
   - [x] 重構 `index.html` 成為專屬地產國企與高股息基金追蹤儀錶板
   - [x] 部署全新 GitHub Pages (`https://garfiwang.github.io/fund-tracker/`)
-- [ ] 階段三：持續追蹤精選基金最新歷史淨值與圖表擴充
+- [x] 階段三：新增客戶 WANG 專屬多重資產基金追蹤儀錶板 (300萬 NTD 起投，安聯收益成長 + 中信科技趨勢)
+- [ ] 階段四：持續追蹤精選基金最新歷史淨值與圖表擴充
 
 ## 資料夾結構
 ```
@@ -28,11 +29,16 @@
 ├── AGENTS.md
 ├── handoff.md
 ├── index.html
+├── wang_dashboard.html
+├── wang_app.js
 ├── china_property_soe_research.html
 ├── 五檔中國地產國企新基金投資研究報告.md
 ├── styles.css
 ├── app.js
 └── data/
+    ├── allianz_income_growth_details.json
+    ├── ctbc_tech_trend_details.json
+    ├── wang_portfolio.json
     ├── amundi_real_income_details.json
     ├── ctbc_00882_details.json
     ├── fidelity_china_details.json

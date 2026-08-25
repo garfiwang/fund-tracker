@@ -1,0 +1,58 @@
+{
+  "client_id": "WANG",
+  "client_name": "WANG 客戶專屬多重資產投資組合",
+  "start_date": "2024-12-01",
+  "initial_capital_twd": 3000000,
+  "currency": "TWD",
+  "holdings": [
+    {
+      "fund_code": "ALLIANZ_INCOME_GROWTH",
+      "fund_name": "安聯收益成長多重資產基金-新台幣",
+      "isin": "TW000T3635B5",
+      "initial_weight": 0.50,
+      "initial_amount_twd": 1500000,
+      "purchase_nav": 9.1500,
+      "units": 163934.43,
+      "latest_nav": 9.8500,
+      "current_value_twd": 1614754.13,
+      "monthly_yield_rate": 0.0065,
+      "total_dividend_twd": 182786.88
+    },
+    {
+      "fund_code": "CTBC_TECH_TREND",
+      "fund_name": "中國信託科技趨勢多重資產基金-新台幣",
+      "isin": "TW000T2693B5",
+      "initial_weight": 0.50,
+      "initial_amount_twd": 1500000,
+      "purchase_nav": 9.4000,
+      "units": 159574.47,
+      "latest_nav": 10.4500,
+      "current_value_twd": 1667553.21,
+      "monthly_yield_rate": 0.0055,
+      "total_dividend_twd": 165957.45
+    }
+  ],
+  "history": [
+    { "month": "2024-12", "allianz_nav": 9.15, "ctbc_nav": 9.40, "total_value": 3000000, "monthly_dividend": 0, "cum_dividend": 0 },
+    { "month": "2025-01", "allianz_nav": 9.22, "ctbc_nav": 9.48, "total_value": 3024606, "monthly_dividend": 17826, "cum_dividend": 17826 },
+    { "month": "2025-02", "allianz_nav": 9.18, "ctbc_nav": 9.55, "total_value": 3028860, "monthly_dividend": 17826, "cum_dividend": 35652 },
+    { "month": "2025-03", "allianz_nav": 9.25, "ctbc_nav": 9.62, "total_value": 3051493, "monthly_dividend": 17826, "cum_dividend": 53478 },
+    { "month": "2025-04", "allianz_nav": 9.31, "ctbc_nav": 9.70, "total_value": 3074092, "monthly_dividend": 17826, "cum_dividend": 71304 },
+    { "month": "2025-05", "allianz_nav": 9.38, "ctbc_nav": 9.82, "total_value": 3104690, "monthly_dividend": 17826, "cum_dividend": 89130 },
+    { "month": "2025-06", "allianz_nav": 9.42, "ctbc_nav": 9.90, "total_value": 3124041, "monthly_dividend": 17826, "cum_dividend": 106956 },
+    { "month": "2025-07", "allianz_nav": 9.48, "ctbc_nav": 10.02, "total_value": 3153026, "monthly_dividend": 17826, "cum_dividend": 124782 },
+    { "month": "2025-08", "allianz_nav": 9.45, "ctbc_nav": 10.08, "total_value": 3157640, "monthly_dividend": 17826, "cum_dividend": 142608 },
+    { "month": "2025-09", "allianz_nav": 9.52, "ctbc_nav": 10.15, "total_value": 3180327, "monthly_dividend": 17826, "cum_dividend": 160434 },
+    { "month": "2025-10", "allianz_nav": 9.58, "ctbc_nav": 10.22, "total_value": 3201389, "monthly_dividend": 17826, "cum_dividend": 178260 },
+    { "month": "2025-11", "allianz_nav": 9.64, "ctbc_nav": 10.28, "total_value": 3220740, "monthly_dividend": 17826, "cum_dividend": 196086 },
+    { "month": "2025-12", "allianz_nav": 9.68, "ctbc_nav": 10.35, "total_value": 3238883, "monthly_dividend": 17826, "cum_dividend": 213912 },
+    { "month": "2026-01", "allianz_nav": 9.72, "ctbc_nav": 10.38, "total_value": 3249826, "monthly_dividend": 17826, "cum_dividend": 231738 },
+    { "month": "2026-02", "allianz_nav": 9.70, "ctbc_nav": 10.40, "total_value": 3249733, "monthly_dividend": 17826, "cum_dividend": 249564 },
+    { "month": "2026-03", "allianz_nav": 9.75, "ctbc_nav": 10.42, "total_value": 3261109, "monthly_dividend": 17826, "cum_dividend": 267390 },
+    { "month": "2026-04", "allianz_nav": 9.78, "ctbc_nav": 10.45, "total_value": 3270889, "monthly_dividend": 17826, "cum_dividend": 285216 },
+    { "month": "2026-05", "allianz_nav": 9.82, "ctbc_nav": 10.48, "total_value": 3282136, "monthly_dividend": 17826, "cum_dividend": 303042 },
+    { "month": "2026-06", "allianz_nav": 9.80, "ctbc_nav": 10.46, "total_value": 3275591, "monthly_dividend": 17826, "cum_dividend": 320868 },
+    { "month": "2026-07", "allianz_nav": 9.83, "ctbc_nav": 10.44, "total_value": 3277443, "monthly_dividend": 17826, "cum_dividend": 338694 },
+    { "month": "2026-08", "allianz_nav": 9.85, "ctbc_nav": 10.45, "total_value": 3282307, "monthly_dividend": 17826, "cum_dividend": 348744 }
+  ]
+}

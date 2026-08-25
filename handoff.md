@@ -3,29 +3,32 @@
 > 任何 Agent、任何電腦接手前**必讀**；收工時**必更新**。本檔只放交接必需的精簡資訊，詳細脈絡放 Obsidian（若有 L3）。
 
 ## ⏯️ 目前做到哪
-1. **00882 ETF 資料校正完成**：
-   - 已精準更正代碼/ISIN 為 `TW0000088204`，配息標註為「半年配息 (1月/7月)」。
-2. **校正並新增「東方匯理實質收息多重資產證券投資信託基金-AD 月配型(新臺幣)」長期追蹤**：
-   - 已全面清除先前誤建之全球多重資產成長收益基金檔案 (`data/amundi_multi_asset_growth_details.json`)。
-   - 已建立正確標的 JSON 檔案 `data/amundi_real_income_details.json`（ISIN: `TW000T3523C1`，最新淨值 `9.9700 TWD`）。
-   - 已更新藍圖 `AGENTS.md` 標的清單為 6 檔（納入東方匯理實質收息多重資產基金）。
-3. **線上 GitHub Pages 自動更新上線**：
-   - 主儀錶板：[https://garfiwang.github.io/fund-tracker/](https://garfiwang.github.io/fund-tracker/)
-   - 專題研究報告頁：[https://garfiwang.github.io/fund-tracker/china_property_soe_research.html](https://garfiwang.github.io/fund-tracker/china_property_soe_research.html)
+1. **成功建置「客戶 WANG 專屬基金追蹤儀錶板」**：
+   - 專屬頁面：`wang_dashboard.html` 與腳本 `wang_app.js`。
+   - 記錄客戶 **WANG** 自 2024 年 12 月起投之 **NT$ 3,000,000** 初始資金。
+   - 追蹤兩大核心多重資產基金：
+     1. **安聯收益成長多重資產基金-新台幣** (`data/allianz_income_growth_details.json`)
+     2. **中國信託科技趨勢多重資產基金-新台幣** (`data/ctbc_tech_trend_details.json`)
+   - 建立歷史走勢數據集 `data/wang_portfolio.json`（包含 2024/12 至 2026/08 共 21 個月之總市值變化與累計已領獲派利息）。
+2. **新增動態配置與圖表互動功能**：
+   - 提供互動式 slider 滑桿，可實時連動試算不同配置比重（預設 50%:50%）下之金額、最新總估值與預估年化配息。
+   - 整合 Chart.js 雙曲線圖（總資產與含息成長曲線、兩大基金歷史淨值比較）。
+3. **首頁導覽連結無縫整合**：
+   - 在 `index.html` 頂部 Header 加入「客戶 WANG 儀錶板」按鈕，可於各儀錶板間順暢切換。
 
 ## 🚦 目前狀態
-- 已更正並精確納入「東方匯理實質收息多重資產證券投資信託基金」進行長期追蹤監控。
-- 錯誤舊檔已全數移除，工作區檔案狀態乾淨且精準。
+- 客戶 WANG 專屬追蹤儀錶板開發完成，資料解析與計算邏輯經 Python JSON 驗證皆通過。
+- 專案檔案結構完備乾淨。
 
 ## ➡️ 下一步
-1. 可進一步更新 `index.html` 與 `app.js` 以同時在儀錶板展現 6 檔基金淨值走勢與詳細動態。
-2. 隨時依需求觀測與更新追蹤基金之最新歷史淨值。
+1. 可視需求隨時擴充與微調客戶 WANG 組合之月度最新淨值與實際配息數字。
+2. 可推送到 GitHub 遠端讓 GitHub Pages 同步最新 `wang_dashboard.html` 頁面。
 
 ## ⚠️ 注意事項
 - 本專案位於 Google 雲端硬碟，請確保 Google 雲端硬碟桌面版的同步圖示已打勾。
 
 ## 🕐 最後更新
-- 時間：2026-08-23 17:25
+- 時間：2026-08-26 00:31
 - 更新者：Antigravity @ Mac
-- 最新進度：成功更正並正式將「東方匯理實質收息多重資產證券投資信託基金-AD 月配型(新臺幣)」納入 6 檔追蹤清單，儀錶板已部署更新上線至 GitHub Pages！
-- Git push：✅ 已推 (`main`)
+- 最新進度：成功完成客戶 WANG 專屬多重資產基金追蹤儀錶板（`wang_dashboard.html`）與動態計算/圖表模組。
+- Git push：⏳ 待推送

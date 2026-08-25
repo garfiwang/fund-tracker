@@ -1,0 +1,25 @@
+{
+  "fund_code": "ALLIANZ_INCOME_GROWTH",
+  "fund_name": "安聯收益成長多重資產基金-新台幣",
+  "isin_b": "TW000T3635B5",
+  "isin_a": "TW000T3635A7",
+  "currency": "TWD",
+  "risk_level": "RR3",
+  "dividend_frequency": "B類型 月配息 (配息可能來自本金)",
+  "latest_nav": 9.8500,
+  "latest_nav_date": "2026-08-21",
+  "estimated_annual_yield": "7.80%",
+  "asset_allocation": [
+    { "category": "美國成長股票", "weight": "33.3%" },
+    { "category": "美國高收益債券", "weight": "33.3%" },
+    { "category": "美國可轉換公司債", "weight": "33.4%" }
+  ],
+  "top_holdings": [
+    { "rank": 1, "name": "NVIDIA Corp (輝達)", "type": "科技股票", "weight": "3.80%" },
+    { "rank": 2, "name": "Microsoft Corp (微軟)", "type": "科技股票", "weight": "3.50%" },
+    { "rank": 3, "name": "Amazon.com Inc (亞馬遜)", "type": "消費科技", "weight": "2.90%" },
+    { "rank": 4, "name": "US High Yield Bond Basket (美高收債券)", "type": "高收益債券", "weight": "33.30%" },
+    { "rank": 5, "name": "US Convertible Bond Portfolio (美可轉債)", "type": "可轉換債券", "weight": "33.40%" }
+  ],
+  "strategy_description": "採黃金「三分之一」多重資產策略：均衡投資美股成長股、高收益債券與可轉換公司債。成長股捕捉上漲趨勢，高收益債提供高額穩定票息，可轉債兼具下檔保護與轉股彈性，非常適合追求穩健配息與資本增值的投資人。"
+}
