@@ -1,6 +1,6 @@
 /**
  * Individual Fund Tracker Logic
- * Renders monthly NAV table, monthly dividend table, and dual-axis chart.
+ * Renders monthly NAV table, monthly dividend table, cumulative dividend stats, and dual-axis chart.
  */
 
 let fundData = null;
@@ -36,13 +36,37 @@ function renderOverview() {
   if (document.getElementById('strategyDesc')) {
     document.getElementById('strategyDesc').textContent = fundData.strategy_description;
   }
+
+  // Calculate Cumulative Dividend for Client WANG
+  let initialCapital = 2100000;
+  let purchaseNav = 8.9500;
+  if (fundData.fund_code === 'PINEBRIDGE_PREFERRED_INCOME') {
+    initialCapital = 900000;
+    purchaseNav = 7.5620;
+  }
+  const units = initialCapital / purchaseNav;
+
+  let totalPerUnitDiv = 0;
+  if (fundData.monthly_dividend_history) {
+    totalPerUnitDiv = fundData.monthly_dividend_history.reduce((sum, item) => sum + item.per_unit_twd, 0);
+  }
+
+  const totalCumDividend = totalPerUnitDiv * units;
+  const cumYieldPct = (totalCumDividend / initialCapital) * 100;
+
+  if (document.getElementById('cumDividendVal')) {
+    document.getElementById('cumDividendVal').textContent = `NT$ ${Math.round(totalCumDividend).toLocaleString()}`;
+  }
+  if (document.getElementById('cumDividendYield')) {
+    document.getElementById('cumDividendYield').textContent = `累計獲利率 ${cumYieldPct.toFixed(2)}% (基於 NT$ ${(initialCapital / 10000).toFixed(0)}萬 本金)`;
+  }
 }
 
 function renderNavTable() {
   const tbody = document.getElementById('navHistoryTableBody');
   if (!tbody || !fundData.monthly_nav_history) return;
 
-  tbody.innerHTML = fundData.monthly_nav_history.map((row, idx) => {
+  tbody.innerHTML = fundData.monthly_nav_history.map((row) => {
     const isNegative = row.change_pct.startsWith('-');
     const badgeColor = isNegative ? 'color: #dc2626; font-weight: 700;' : 'color: #059669; font-weight: 700;';
     return `
@@ -59,14 +83,29 @@ function renderDividendTable() {
   const tbody = document.getElementById('dividendHistoryTableBody');
   if (!tbody || !fundData.monthly_dividend_history) return;
 
+  let initialCapital = 2100000;
+  let purchaseNav = 8.9500;
+  if (fundData.fund_code === 'PINEBRIDGE_PREFERRED_INCOME') {
+    initialCapital = 900000;
+    purchaseNav = 7.5620;
+  }
+  const units = initialCapital / purchaseNav;
+
+  let runningCumDiv = 0;
+
   tbody.innerHTML = fundData.monthly_dividend_history.map((row) => {
+    const monthlyAmount = row.per_unit_twd * units;
+    runningCumDiv += monthlyAmount;
+
     return `
       <tr style="border-bottom: 1px solid var(--border-color);">
         <td style="padding: 10px 14px; font-weight: 700;">${row.month}</td>
-        <td style="padding: 10px 14px; text-align: right; font-weight: 800; color: #d97706;">NT$ ${row.per_unit_twd.toFixed(4)}</td>
+        <td style="padding: 10px 14px; text-align: right; font-weight: 700; color: #d97706;">NT$ ${row.per_unit_twd.toFixed(4)}</td>
+        <td style="padding: 10px 14px; text-align: right; font-weight: 800; color: #2563eb;">NT$ ${Math.round(monthlyAmount).toLocaleString()}</td>
+        <td style="padding: 10px 14px; text-align: right; font-weight: 800; color: #059669;">NT$ ${Math.round(runningCumDiv).toLocaleString()}</td>
         <td style="padding: 10px 14px; text-align: center; color: var(--text-secondary);">${row.ex_date}</td>
         <td style="padding: 10px 14px; text-align: center; color: var(--text-secondary);">${row.pay_date}</td>
-        <td style="padding: 10px 14px; text-align: right; font-weight: 800; color: #059669;">${row.annualized_yield}</td>
+        <td style="padding: 10px 14px; text-align: right; font-weight: 800; color: #7c3aed;">${row.annualized_yield}</td>
       </tr>
     `;
   }).join('');

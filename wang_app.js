@@ -26,10 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderKPIs();
     renderFundCards();
     
-    // 3. Initialize Interactive Weight Controller
-    initWeightController();
-
-    // 4. Render Charts
+    // 3. Render Charts
     renderPortfolioGrowthChart();
     renderNavComparisonChart();
 
