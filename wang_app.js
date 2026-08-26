@@ -55,12 +55,16 @@ function renderKPIs(allianzWeight = 0.70) {
   const allianzCurrValue = allianzUnits * allianzHolding.latest_nav; // 1,963,910.60
   const pbCurrValue = pbUnits * pbHolding.latest_nav; // 799,407.55
 
-  const allianzTotalDiv = allianzHolding.total_dividend_twd; // 262,793.30
-  const pbTotalDiv = pbHolding.total_dividend_twd; // 119,016.13
+  // Dynamically compute exact total dividends for 100% mathematical consistency across pages
+  const allianzTotalDivPerUnit = allianzData.monthly_dividend_history ? allianzData.monthly_dividend_history.reduce((sum, item) => sum + item.per_unit_twd, 0) : 0;
+  const pbTotalDivPerUnit = pinebridgeData.monthly_dividend_history ? pinebridgeData.monthly_dividend_history.reduce((sum, item) => sum + item.per_unit_twd, 0) : 0;
+
+  const allianzTotalDiv = allianzTotalDivPerUnit * allianzUnits; // 264,201.11
+  const pbTotalDiv = pbTotalDivPerUnit * pbUnits; // 119,016.13
 
   const totalCurrentValue = allianzCurrValue + pbCurrValue; // 基金純總市值 (2,763,319)
-  const totalDividendReceived = allianzTotalDiv + pbTotalDiv; // 累計配息 (381,809)
-  const totalAssetValue = totalCurrentValue + totalDividendReceived; // 資產總值 (3,145,128)
+  const totalDividendReceived = allianzTotalDiv + pbTotalDiv; // 累計配息 (383,217)
+  const totalAssetValue = totalCurrentValue + totalDividendReceived; // 資產總值 (3,146,536)
 
   const netTotalProfit = totalAssetValue - initialCapital; // 淨獲利 (+145,128)
   const netTotalROI = (netTotalProfit / initialCapital) * 100; // 含息總 ROI (+4.84%)

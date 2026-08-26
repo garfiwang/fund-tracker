@@ -16,7 +16,7 @@
       "latest_nav": 8.3700,
       "current_value_twd": 1963910.60,
       "monthly_yield_rate": 0.0062,
-      "total_dividend_twd": 262793.30
+      "total_dividend_twd": 264201.11
     },
     {
       "fund_code": "PINEBRIDGE_PREFERRED_INCOME",
@@ -53,6 +53,6 @@
     { "month": "2026-05", "allianz_nav": 8.58, "pinebridge_nav": 6.8204, "total_value": 2824908, "monthly_dividend": 19794, "cum_dividend": 323838 },
     { "month": "2026-06", "allianz_nav": 8.61, "pinebridge_nav": 6.7741, "total_value": 2826436, "monthly_dividend": 19794, "cum_dividend": 343632 },
     { "month": "2026-07", "allianz_nav": 8.45, "pinebridge_nav": 6.7168, "total_value": 2782160, "monthly_dividend": 19794, "cum_dividend": 363426 },
-    { "month": "2026-08", "allianz_nav": 8.37, "pinebridge_nav": 6.6950, "total_value": 2763319, "monthly_dividend": 19794, "cum_dividend": 381809 }
+    { "month": "2026-08", "allianz_nav": 8.37, "pinebridge_nav": 6.6950, "total_value": 2763319, "monthly_dividend": 19794, "cum_dividend": 383217 }
   ]
 }
