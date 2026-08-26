@@ -86,7 +86,7 @@ function renderKPIs(allianzWeight = 0.70) {
   document.getElementById('totalReturnAmountText').textContent = `獲利小計 +NT$ ${Math.round(netTotalProfit).toLocaleString()}`;
 
   document.getElementById('monthlyEstDivText').textContent = `NT$ ${Math.round(monthlyEstDividend).toLocaleString()} / 月`;
-  document.getElementById('annualEstDivText').textContent = `預估年領 NT$ ${Math.round(annualEstDividend).toLocaleString()}`;
+  document.getElementById('annualEstDivText').textContent = `依最新息率預估年領 NT$ ${Math.round(annualEstDividend).toLocaleString()}`;
 }
 
 /**
