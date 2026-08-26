@@ -41,39 +41,39 @@ document.addEventListener('DOMContentLoaded', async () => {
 /**
  * Render Top KPI Cards
  */
-function renderKPIs(allianzWeight = 0.50) {
+function renderKPIs(allianzWeight = 0.70) {
   const pbWeight = 1.0 - allianzWeight;
   const initialCapital = portfolioData.initial_capital_twd; // 3,000,000
   
   const allianzHolding = portfolioData.holdings.find(h => h.fund_code === 'ALLIANZ_INCOME_GROWTH');
   const pbHolding = portfolioData.holdings.find(h => h.fund_code === 'PINEBRIDGE_PREFERRED_INCOME');
 
-  // Calculate under current weights
-  const allianzAllocated = initialCapital * allianzWeight;
-  const pbAllocated = initialCapital * pbWeight;
+  // Calculate under current weights (70% Allianz, 30% PineBridge)
+  const allianzAllocated = initialCapital * allianzWeight; // 2,100,000
+  const pbAllocated = initialCapital * pbWeight; // 900,000
 
-  const allianzUnits = allianzAllocated / allianzHolding.purchase_nav;
-  const pbUnits = pbAllocated / pbHolding.purchase_nav;
+  const allianzUnits = allianzAllocated / allianzHolding.purchase_nav; // 234,636.87
+  const pbUnits = pbAllocated / pbHolding.purchase_nav; // 119,016.13
 
-  const allianzCurrValue = allianzUnits * allianzHolding.latest_nav;
-  const pbCurrValue = pbUnits * pbHolding.latest_nav;
+  const allianzCurrValue = allianzUnits * allianzHolding.latest_nav; // 1,963,910.60
+  const pbCurrValue = pbUnits * pbHolding.latest_nav; // 799,407.55
 
-  const allianzTotalDiv = allianzHolding.total_dividend_twd; // 187,709.50
-  const pbTotalDiv = pbHolding.total_dividend_twd; // 198,360.22
+  const allianzTotalDiv = allianzHolding.total_dividend_twd; // 262,793.30
+  const pbTotalDiv = pbHolding.total_dividend_twd; // 119,016.13
 
-  const totalCurrentValue = allianzCurrValue + pbCurrValue; // 基金純總市值
-  const totalDividendReceived = allianzTotalDiv + pbTotalDiv; // 累計配息
-  const totalAssetValue = totalCurrentValue + totalDividendReceived; // 資產總值 (總市值 ＋ 累計配息)
+  const totalCurrentValue = allianzCurrValue + pbCurrValue; // 基金純總市值 (2,763,319)
+  const totalDividendReceived = allianzTotalDiv + pbTotalDiv; // 累計配息 (381,809)
+  const totalAssetValue = totalCurrentValue + totalDividendReceived; // 資產總值 (3,145,128)
 
-  const netTotalProfit = totalAssetValue - initialCapital; // 淨獲利
-  const netTotalROI = (netTotalProfit / initialCapital) * 100; // 含息總 ROI
+  const netTotalProfit = totalAssetValue - initialCapital; // 淨獲利 (+145,128)
+  const netTotalROI = (netTotalProfit / initialCapital) * 100; // 含息總 ROI (+4.84%)
 
   // Monthly & Annualized Estimated Cash Flow (Direct Units * Per-Unit Dividend)
   const allianzLatestPerUnitDiv = 0.0590; // 最新每單位配息 (TWD)
   const pbLatestPerUnitDiv = 0.0500; // 最新每單位配息 (TWD)
 
-  const monthlyEstDividend = (allianzUnits * allianzLatestPerUnitDiv) + (pbUnits * pbLatestPerUnitDiv);
-  const annualEstDividend = monthlyEstDividend * 12;
+  const monthlyEstDividend = (allianzUnits * allianzLatestPerUnitDiv) + (pbUnits * pbLatestPerUnitDiv); // 19,794.39 / 月
+  const annualEstDividend = monthlyEstDividend * 12; // 237,532.68 / 年
 
   // Update UI Elements
   document.getElementById('initialCapitalText').textContent = `NT$ ${initialCapital.toLocaleString()}`;
@@ -86,32 +86,6 @@ function renderKPIs(allianzWeight = 0.50) {
 
   document.getElementById('monthlyEstDivText').textContent = `NT$ ${Math.round(monthlyEstDividend).toLocaleString()} / 月`;
   document.getElementById('annualEstDivText').textContent = `預估年領 NT$ ${Math.round(annualEstDividend).toLocaleString()}`;
-
-  // Update Allocation breakdown labels
-  document.getElementById('allianzAllocText').textContent = `NT$ ${Math.round(allianzCurrValue).toLocaleString()} (${(allianzWeight * 100).toFixed(0)}%)`;
-  document.getElementById('pbAllocText').textContent = `NT$ ${Math.round(pbCurrValue).toLocaleString()} (${(pbWeight * 100).toFixed(0)}%)`;
-}
-
-/**
- * Initialize Slider Controller for dynamically tweaking allocation weights
- */
-function initWeightController() {
-  const slider = document.getElementById('allianzSlider');
-  const allianzValLabel = document.getElementById('allianzSliderVal');
-  const pbValLabel = document.getElementById('pbSliderVal');
-
-  if (!slider) return;
-
-  slider.addEventListener('input', (e) => {
-    const allianzPct = parseInt(e.target.value, 10);
-    const pbPct = 100 - allianzPct;
-
-    allianzValLabel.textContent = `${allianzPct}%`;
-    pbValLabel.textContent = `${pbPct}%`;
-
-    const allianzWeight = allianzPct / 100;
-    renderKPIs(allianzWeight);
-  });
 }
 
 /**
