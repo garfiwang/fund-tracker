@@ -3,20 +3,18 @@
 > 任何 Agent、任何電腦接手前**必讀**；收工時**必更新**。本檔只放交接必需的精簡資訊，詳細脈絡放 Obsidian（若有 L3）。
 
 ## ⏯️ 目前做到哪
-1. **成功設定固定 70%:30% 初始本金配置，並徹底移除互動滑桿欄位**：
-   - 應客戶要求，已自 `wang_dashboard.html` 與 `wang_app.js` 中刪除「互動式資產配置比例試算器」區塊。
-   - **固定配置設定**：初始資本 300 萬 NTD，固定設定 **安聯收益成長 70% (NT$ 2,100,000)** ＋ **柏瑞特別收益 30% (NT$ 900,000)**。
-   - **最新全組合數據更新**：
-     - 最新基金總市值：`NT$ 2,763,319` (安聯 $1,963,911 ＋ 柏瑞 $799,408)
-     - 累計獲派利息：`NT$ 381,809` (安聯 $262,793 ＋ 柏瑞 $119,016)
-     - 資產總值 (總市值 ＋ 累計配息)：`NT$ 3,145,128`
-     - 含息總淨獲利：`+NT$ 145,128 (+4.84%)`
-     - 預估月度現金流：`NT$ 19,794 / 月` (預估年領 `NT$ 237,533`)
-2. **線上 GitHub Pages 自動更新發布**：
-   - WANG 總儀錶板：[https://garfiwang.github.io/fund-tracker/wang_dashboard.html](https://garfiwang.github.io/fund-tracker/wang_dashboard.html)
+1. **成功修復主儀錶板圖表未顯示問題**：
+   - 排查並修復 `wang_app.js` 中因移除舊 slider 函數所引發的未定義 ReferenceError，確保 `renderPortfolioGrowthChart()` 與 `renderNavComparisonChart()` 在 `wang_dashboard.html` 順暢渲染。
+2. **為兩大基金獨立子頁面新增「累計獲派利息統計」與明細欄位**：
+   - **安聯收益成長子頁**：頂部新增「累計獲派利息總額」卡片（`NT$ 264,209`，累計收益率 `12.58%`），並在配息表格中新增「當月實領金額」與「累計配息金額」欄位。
+   - **柏瑞特別收益子頁**：頂部新增「累計獲派利息總額」卡片（`NT$ 119,016`，累計收益率 `13.22%`），並在配息表格中新增「當月實領金額」與「累計配息金額」欄位。
+3. **線上 GitHub Pages 自動更新發布**：
+   - 主儀錶板：[https://garfiwang.github.io/fund-tracker/wang_dashboard.html](https://garfiwang.github.io/fund-tracker/wang_dashboard.html)
+   - 安聯子頁：[https://garfiwang.github.io/fund-tracker/allianz_income_growth_tracker.html](https://garfiwang.github.io/fund-tracker/allianz_income_growth_tracker.html)
+   - 柏瑞子頁：[https://garfiwang.github.io/fund-tracker/pinebridge_preferred_income_tracker.html](https://garfiwang.github.io/fund-tracker/pinebridge_preferred_income_tracker.html)
 
 ## 🚦 目前狀態
-- 固定 70%:30% 配置與試算欄位刪除全數完成，線上版本已部署。
+- 圖表修復與子頁面累計配息統計功能全數完成並順利推送到 GitHub Pages。
 
 ## ➡️ 下一步
 1. 隨時依據官網最新公告更新月份數據。
@@ -25,7 +23,7 @@
 - 本專案位於 Google 雲端硬碟，請確保 Google 雲端硬碟桌面版的同步圖示已打勾。
 
 ## 🕐 最後更新
-- 時間：2026-08-26 08:17
+- 時間：2026-08-26 09:01
 - 更新者：Antigravity @ Mac
-- 最新進度：成功刪除試算滑桿，設定安聯 70% ＋ 柏瑞 30% 固定配置並更新所有數值至 GitHub Pages。
+- 最新進度：修復圖表渲染 Bug，並在兩大基金獨立子頁面中新增累計獲派利息卡片與明細表格欄位。
 - Git push：✅ 已推 (`main`)
