@@ -1,0 +1,209 @@
+{
+  "client": "sun",
+  "transactions": [
+    {
+      "id": "TX-2318-20260629-01",
+      "date": "2026-06-29",
+      "account_id": "2318",
+      "target_name": "BGTPB022柏瑞多重資產特別收益基金-B類型 - (配現金)",
+      "full_target_name": "BGTPB022柏瑞多重資產特別收益基金-B類型 - (配現金)(本基金有相當比重投資於非投資等級之高風險債券且配息來源可能為本金)",
+      "currency": "TWD",
+      "type": "申購",
+      "units": 295073.887267,
+      "price": 6.7806,
+      "exchange_rate": 1,
+      "total_amount": 2000778
+    },
+    {
+      "id": "FEE-2318-20260723-01",
+      "date": "2026-07-23",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "保單管理費/保單管理費之行政管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 100
+    },
+    {
+      "id": "FEE-2318-20260723-02",
+      "date": "2026-07-23",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "標的維護費/保單管理費/保單管理費之帳戶管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 3974
+    },
+    {
+      "id": "FEE-2318-20260723-03",
+      "date": "2026-07-23",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "保險成本",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 95
+    },
+    {
+      "id": "FEE-2318-20260702-01",
+      "date": "2026-07-02",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "保單管理費/保單管理費之行政管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 100
+    },
+    {
+      "id": "FEE-2318-20260702-02",
+      "date": "2026-07-02",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "標的維護費/保單管理費/保單管理費之帳戶管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 3991
+    },
+    {
+      "id": "FEE-2318-20260702-03",
+      "date": "2026-07-02",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "保險成本",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 95
+    },
+    {
+      "id": "FEE-2318-20260702-04",
+      "date": "2026-07-02",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "保單管理費/保單管理費之行政管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 100
+    },
+    {
+      "id": "FEE-2318-20260702-05",
+      "date": "2026-07-02",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "標的維護費/保單管理費/保單管理費之帳戶管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 4000
+    },
+    {
+      "id": "FEE-2318-20260702-06",
+      "date": "2026-07-02",
+      "account_id": "2318",
+      "type": "扣款",
+      "item": "保險成本",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 95
+    },
+    {
+      "id": "DIV-2318-20260630-01",
+      "record_date": "2026-06-30",
+      "payout_date": "2026-07-15",
+      "account_id": "2318",
+      "target_name": "BGTPB022柏瑞多重資產特別收益基金-B類型 - (配現金)",
+      "type": "配息",
+      "payment_method": "銀行轉帳",
+      "target_units": 293837.860957,
+      "dividend_per_unit": 0.05,
+      "currency": "TWD",
+      "exchange_rate": 1,
+      "total_amount": 14692
+    },
+    {
+      "id": "DIV-2318-20260731-01",
+      "record_date": "2026-07-31",
+      "payout_date": "2026-08-12",
+      "account_id": "2318",
+      "target_name": "BGTPB022柏瑞多重資產特別收益基金-B類型 - (配現金)",
+      "type": "配息",
+      "payment_method": "銀行轉帳",
+      "target_units": 293221.345622,
+      "dividend_per_unit": 0.05,
+      "currency": "TWD",
+      "exchange_rate": 1,
+      "total_amount": 14661
+    },
+    {
+      "id": "TX-9318-20260817-01",
+      "date": "2026-08-17",
+      "account_id": "9318",
+      "target_name": "BGTPB022柏瑞多重資產特別收益基金-B類型 - (配現金)",
+      "full_target_name": "BGTPB022柏瑞多重資產特別收益基金-B類型 - (配現金)(本基金有相當比重投資於非投資等級之高風險債券且配息來源可能為本金)",
+      "currency": "TWD",
+      "type": "申購",
+      "units": 150690.823657,
+      "price": 6.6399,
+      "exchange_rate": 1,
+      "total_amount": 1000572
+    },
+    {
+      "id": "FEE-9318-20260820-01",
+      "date": "2026-08-20",
+      "account_id": "9318",
+      "type": "扣款",
+      "item": "保單管理費/保單管理費之行政管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 100
+    },
+    {
+      "id": "FEE-9318-20260820-02",
+      "date": "2026-08-20",
+      "account_id": "9318",
+      "type": "扣款",
+      "item": "標的維護費/保單管理費/保單管理費之帳戶管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 2000
+    },
+    {
+      "id": "FEE-9318-20260820-03",
+      "date": "2026-08-20",
+      "account_id": "9318",
+      "type": "扣款",
+      "item": "保險成本",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 47
+    },
+    {
+      "id": "FEE-9318-20260820-04",
+      "date": "2026-08-20",
+      "account_id": "9318",
+      "type": "扣款",
+      "item": "保單管理費/保單管理費之行政管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 100
+    },
+    {
+      "id": "FEE-9318-20260820-05",
+      "date": "2026-08-20",
+      "account_id": "9318",
+      "type": "扣款",
+      "item": "標的維護費/保單管理費/保單管理費之帳戶管理費",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 1996
+    },
+    {
+      "id": "FEE-9318-20260820-06",
+      "date": "2026-08-20",
+      "account_id": "9318",
+      "type": "扣款",
+      "item": "保險成本",
+      "summary": "保險相關費用",
+      "currency": "TWD",
+      "amount": 48
+    }
+  ]
+}

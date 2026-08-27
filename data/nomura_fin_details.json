@@ -1,0 +1,324 @@
+{
+  "fund_code": "TW000T3866B0",
+  "fund_name": "野村全球金融收益基金-月配類型 - (配股數/配息)",
+  "isin": "TW000T3866B0",
+  "currency": "TWD",
+  "risk_level": "RR2",
+  "inception_date": "2020-09-16",
+  "dividend_frequency": "月配息/配股",
+  "latest_dividend_per_unit": 0.048,
+  "latest_nav": 7.1429,
+  "latest_nav_date": "2026-08-25",
+  "subscription_price": 7.10,
+  "subscription_date": "2026-06-29",
+  "nav_30_days": [
+    {
+      "date": "2026/08/25",
+      "nav": 7.1429,
+      "change": 0.0365
+    },
+    {
+      "date": "2026/08/24",
+      "nav": 10.652,
+      "change": 0.012
+    },
+    {
+      "date": "2026/08/21",
+      "nav": 10.64,
+      "change": 0.01
+    },
+    {
+      "date": "2026/08/20",
+      "nav": 10.63,
+      "change": 0.01
+    },
+    {
+      "date": "2026/08/19",
+      "nav": 10.62,
+      "change": 0.008
+    },
+    {
+      "date": "2026/08/18",
+      "nav": 10.612,
+      "change": 0.012
+    },
+    {
+      "date": "2026/08/17",
+      "nav": 10.6,
+      "change": 0.008
+    },
+    {
+      "date": "2026/08/14",
+      "nav": 10.592,
+      "change": 0.007
+    },
+    {
+      "date": "2026/08/13",
+      "nav": 10.585,
+      "change": 0.007
+    },
+    {
+      "date": "2026/08/12",
+      "nav": 10.578,
+      "change": 0.008
+    },
+    {
+      "date": "2026/08/11",
+      "nav": 10.57,
+      "change": 0.008
+    },
+    {
+      "date": "2026/08/10",
+      "nav": 10.562,
+      "change": 0.012
+    },
+    {
+      "date": "2026/08/07",
+      "nav": 10.546,
+      "change": -0.004
+    },
+    {
+      "date": "2026/08/06",
+      "nav": 10.55,
+      "change": 0.008
+    },
+    {
+      "date": "2026/08/05",
+      "nav": 10.542,
+      "change": 0.012
+    },
+    {
+      "date": "2026/08/04",
+      "nav": 10.53,
+      "change": 0.015
+    },
+    {
+      "date": "2026/08/01",
+      "nav": 10.515,
+      "change": -0.02
+    },
+    {
+      "date": "2026/07/31",
+      "nav": 10.535,
+      "change": 0.008
+    },
+    {
+      "date": "2026/07/30",
+      "nav": 10.527,
+      "change": 0.012
+    },
+    {
+      "date": "2026/07/29",
+      "nav": 10.515,
+      "change": -0.018
+    },
+    {
+      "date": "2026/07/28",
+      "nav": 10.533,
+      "change": 0.01
+    },
+    {
+      "date": "2026/07/25",
+      "nav": 10.523,
+      "change": 0.005
+    },
+    {
+      "date": "2026/07/24",
+      "nav": 10.518,
+      "change": -0.01
+    },
+    {
+      "date": "2026/07/23",
+      "nav": 10.528,
+      "change": -0.018
+    },
+    {
+      "date": "2026/07/22",
+      "nav": 10.546,
+      "change": -0.004
+    },
+    {
+      "date": "2026/07/21",
+      "nav": 10.55,
+      "change": 0.008
+    },
+    {
+      "date": "2026/07/18",
+      "nav": 10.542,
+      "change": 0.01
+    },
+    {
+      "date": "2026/07/17",
+      "nav": 10.532,
+      "change": 0.005
+    },
+    {
+      "date": "2026/07/16",
+      "nav": 10.527,
+      "change": -0.012
+    },
+    {
+      "date": "2026/07/15",
+      "nav": 10.539,
+      "change": -0.008
+    },
+    {
+      "date": "2026/07/14",
+      "nav": 10.547,
+      "change": 0.005
+    },
+    {
+      "date": "2026/07/11",
+      "nav": 10.542,
+      "change": -0.006
+    },
+    {
+      "date": "2026/07/10",
+      "nav": 10.548,
+      "change": -0.004
+    },
+    {
+      "date": "2026/07/09",
+      "nav": 10.552,
+      "change": -0.003
+    }
+  ],
+  "yearly_nav_summary": [
+    {
+      "year": "2024",
+      "nav_range": "9.90 - 10.45 元",
+      "dividend_note": "月配 / 複利配股增長",
+      "description": "受惠美歐大型銀行財報強勁與高票息，表現極為穩健"
+    },
+    {
+      "year": "2025",
+      "nav_range": "10.15 - 10.60 元",
+      "dividend_note": "月配 / 複利配股增長",
+      "description": "投資級金融債受惠利率高檔，提供頂級本金防禦力"
+    },
+    {
+      "year": "2026 (至今)",
+      "nav_range": "10.35 - 10.60 元",
+      "dividend_note": "月配 / 複利配股增長",
+      "description": "截至 8 月最新約 10.5500 元，波動度最低，表現最優異"
+    }
+  ],
+  "top_holdings": [
+    {
+      "rank": 1,
+      "name": "美國銀行 Bank of America Corp (BAC) 金融債",
+      "type": "投資級金融債",
+      "country": "美國",
+      "weight": "6.80%"
+    },
+    {
+      "rank": 2,
+      "name": "摩根大通 JPMorgan Chase & Co (JPM) 金融債",
+      "type": "投資級金融債",
+      "country": "美國",
+      "weight": "6.50%"
+    },
+    {
+      "rank": 3,
+      "name": "花旗集團 Citigroup Inc (C) 金融債",
+      "type": "投資級金融債",
+      "country": "美國",
+      "weight": "5.80%"
+    },
+    {
+      "rank": 4,
+      "name": "高盛集團 Goldman Sachs Group Inc (GS) 金融債",
+      "type": "投資級金融債",
+      "country": "美國",
+      "weight": "5.20%"
+    },
+    {
+      "rank": 5,
+      "name": "大都會人壽 MetLife Inc (MET) 金融債",
+      "type": "保險機構債",
+      "country": "美國",
+      "weight": "4.80%"
+    },
+    {
+      "rank": 6,
+      "name": "巴克萊銀行 Barclays PLC (BARC/LN) 金融債",
+      "type": "投資級金融債",
+      "country": "英國",
+      "weight": "4.20%"
+    },
+    {
+      "rank": 7,
+      "name": "安聯集團 Allianz SE (ALV/GY) 金融債",
+      "type": "保險機構債",
+      "country": "德國",
+      "weight": "3.90%"
+    },
+    {
+      "rank": 8,
+      "name": "日本生命保險 Nippon Life Insurance 債券",
+      "type": "保險機構債",
+      "country": "日本",
+      "weight": "3.50%"
+    },
+    {
+      "rank": 9,
+      "name": "西班牙國際銀行 Banco Santander (SAN/SM) 債券",
+      "type": "投資級金融債",
+      "country": "西班牙",
+      "weight": "3.20%"
+    },
+    {
+      "rank": 10,
+      "name": "富國銀行 Wells Fargo & Co (WFC) 金融債",
+      "type": "投資級金融債",
+      "country": "美國",
+      "weight": "3.00%"
+    }
+  ],
+  "regions": [
+    {
+      "region": "美洲地區 (United States)",
+      "flag": "🇺🇸",
+      "weight": "58.0%",
+      "desc": "配置美國系統性重要銀行 (G-SIBs) 與頂級保險公司債"
+    },
+    {
+      "region": "歐洲地區 (Europe)",
+      "flag": "🇪🇺",
+      "weight": "28.0%",
+      "desc": "英國、德國、西班牙等歐洲大型金融巨頭固定收益債"
+    },
+    {
+      "region": "亞太地區 (Asia-Pacific)",
+      "flag": "🇯🇵",
+      "weight": "12.0%",
+      "desc": "日本生命保險與成熟亞洲優質金融機構債"
+    },
+    {
+      "region": "現金與貨幣市場預備",
+      "flag": "💵",
+      "weight": "2.0%",
+      "desc": "極低現金滯留，絕大部分資金發揮高債息回報"
+    }
+  ],
+  "asset_allocation": [
+    {
+      "category": "全球投資級金融債 (IG Financial Bonds)",
+      "icon": "fa-building-columns",
+      "weight": "92.0%",
+      "desc": "主要持債皆為全球 G-SIBs 系統性重要銀行發行之 A/BBB 評級債券"
+    },
+    {
+      "category": "金融機構次順位債 (Subordinated Debt)",
+      "icon": "fa-shield-halved",
+      "weight": "6.0%",
+      "desc": "提供額外票息溢價，發行體違約率接近於零"
+    },
+    {
+      "category": "現金及流動資產 (Cash)",
+      "icon": "fa-coins",
+      "weight": "2.0%",
+      "desc": "流動性與配息準備資金"
+    }
+  ]
+}

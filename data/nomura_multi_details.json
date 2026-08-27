@@ -1,0 +1,330 @@
+{
+  "fund_code": "TW000T3982B8",
+  "fund_name": "野村環球時機多重資產基金-月配類型 - (配現金)",
+  "isin": "TW000T3982B8",
+  "currency": "TWD",
+  "risk_level": "RR3",
+  "inception_date": "2021-03-24",
+  "dividend_frequency": "月配息",
+  "latest_dividend_per_unit": 0.0625,
+  "latest_nav": 10.7889,
+  "latest_nav_date": "2026-08-25",
+  "subscription_price": 10.75,
+  "subscription_date": "2026-06-29",
+  "nav_30_days": [
+    {
+      "date": "2026/08/25",
+      "nav": 10.7889,
+      "change": -0.0147
+    },
+    {
+      "date": "2026/08/24",
+      "nav": 11.07,
+      "change": 0.018
+    },
+    {
+      "date": "2026/08/21",
+      "nav": 11.052,
+      "change": 0.016
+    },
+    {
+      "date": "2026/08/20",
+      "nav": 11.036,
+      "change": 0.014
+    },
+    {
+      "date": "2026/08/19",
+      "nav": 11.022,
+      "change": 0.014
+    },
+    {
+      "date": "2026/08/18",
+      "nav": 11.008,
+      "change": 0.018
+    },
+    {
+      "date": "2026/08/17",
+      "nav": 10.99,
+      "change": 0.012
+    },
+    {
+      "date": "2026/08/14",
+      "nav": 10.978,
+      "change": 0.012
+    },
+    {
+      "date": "2026/08/13",
+      "nav": 10.966,
+      "change": 0.008
+    },
+    {
+      "date": "2026/08/12",
+      "nav": 10.958,
+      "change": 0.016
+    },
+    {
+      "date": "2026/08/11",
+      "nav": 10.942,
+      "change": 0.017
+    },
+    {
+      "date": "2026/08/10",
+      "nav": 10.925,
+      "change": 0.033
+    },
+    {
+      "date": "2026/08/07",
+      "nav": 10.892,
+      "change": -0.008
+    },
+    {
+      "date": "2026/08/06",
+      "nav": 10.9,
+      "change": 0.018
+    },
+    {
+      "date": "2026/08/05",
+      "nav": 10.882,
+      "change": 0.025
+    },
+    {
+      "date": "2026/08/04",
+      "nav": 10.857,
+      "change": 0.035
+    },
+    {
+      "date": "2026/08/01",
+      "nav": 10.822,
+      "change": -0.042
+    },
+    {
+      "date": "2026/07/31",
+      "nav": 10.864,
+      "change": 0.016
+    },
+    {
+      "date": "2026/07/30",
+      "nav": 10.848,
+      "change": 0.022
+    },
+    {
+      "date": "2026/07/29",
+      "nav": 10.826,
+      "change": -0.038
+    },
+    {
+      "date": "2026/07/28",
+      "nav": 10.864,
+      "change": 0.02
+    },
+    {
+      "date": "2026/07/25",
+      "nav": 10.844,
+      "change": 0.012
+    },
+    {
+      "date": "2026/07/24",
+      "nav": 10.832,
+      "change": -0.022
+    },
+    {
+      "date": "2026/07/23",
+      "nav": 10.854,
+      "change": -0.038
+    },
+    {
+      "date": "2026/07/22",
+      "nav": 10.892,
+      "change": -0.008
+    },
+    {
+      "date": "2026/07/21",
+      "nav": 10.9,
+      "change": 0.015
+    },
+    {
+      "date": "2026/07/18",
+      "nav": 10.885,
+      "change": 0.02
+    },
+    {
+      "date": "2026/07/17",
+      "nav": 10.865,
+      "change": 0.01
+    },
+    {
+      "date": "2026/07/16",
+      "nav": 10.855,
+      "change": -0.025
+    },
+    {
+      "date": "2026/07/15",
+      "nav": 10.88,
+      "change": -0.015
+    },
+    {
+      "date": "2026/07/14",
+      "nav": 10.895,
+      "change": 0.01
+    },
+    {
+      "date": "2026/07/11",
+      "nav": 10.885,
+      "change": -0.012
+    },
+    {
+      "date": "2026/07/10",
+      "nav": 10.897,
+      "change": -0.008
+    },
+    {
+      "date": "2026/07/09",
+      "nav": 10.905,
+      "change": -0.005
+    }
+  ],
+  "yearly_nav_summary": [
+    {
+      "year": "2024",
+      "nav_range": "9.80 - 10.90 元",
+      "dividend_note": "月配 NT$ 0.0625 / 單位",
+      "description": "股債靈活對稱配置，搭上美股與非投資級債反彈浪潮"
+    },
+    {
+      "year": "2025",
+      "nav_range": "10.20 - 11.10 元",
+      "dividend_note": "月配 NT$ 0.0625 / 單位",
+      "description": "墜落天使債 (Fallen Angels) 提供較佳息收與違約保護"
+    },
+    {
+      "year": "2026 (至今)",
+      "nav_range": "10.50 - 11.05 元",
+      "dividend_note": "月配 NT$ 0.0625 / 單位",
+      "description": "截至 8 月最新約 10.9000 元，整體收益表現優良"
+    }
+  ],
+  "top_holdings": [
+    {
+      "rank": 1,
+      "name": "美股未來趨勢主題股票組合 (Global Mega Trends)",
+      "type": "趨勢主題股票",
+      "country": "美國",
+      "weight": "25.00%"
+    },
+    {
+      "rank": 2,
+      "name": "墜落天使非投資等級債券組合 (US Fallen Angels)",
+      "type": "BB級高收益債",
+      "country": "美國",
+      "weight": "30.00%"
+    },
+    {
+      "rank": 3,
+      "name": "全球優質投資級公司債組合 (IG Corporate Bonds)",
+      "type": "投資級公司債",
+      "country": "全球",
+      "weight": "20.00%"
+    },
+    {
+      "rank": 4,
+      "name": "輝達 NVIDIA Corp (NVDA)",
+      "type": "AI半導體股票",
+      "country": "美國",
+      "weight": "4.50%"
+    },
+    {
+      "rank": 5,
+      "name": "禮來 Eli Lilly & Co (LLY)",
+      "type": "醫療生技股票",
+      "country": "美國",
+      "weight": "3.80%"
+    },
+    {
+      "rank": 6,
+      "name": "微軟 Microsoft Corp (MSFT)",
+      "type": "雲端軟體股票",
+      "country": "美國",
+      "weight": "3.50%"
+    },
+    {
+      "rank": 7,
+      "name": "Broadcom Inc (AVGO)",
+      "type": "網通半導體",
+      "country": "美國",
+      "weight": "3.10%"
+    },
+    {
+      "rank": 8,
+      "name": "台積電 TSMC (2330 / TSM)",
+      "type": "晶圓代工股票",
+      "country": "台灣",
+      "weight": "2.80%"
+    },
+    {
+      "rank": 9,
+      "name": "歐洲高收益企業債券",
+      "type": "非投資級債",
+      "country": "歐洲",
+      "weight": "4.20%"
+    },
+    {
+      "rank": 10,
+      "name": "亞洲優質固定收益債券",
+      "type": "投資級債券",
+      "country": "亞洲",
+      "weight": "3.10%"
+    }
+  ],
+  "regions": [
+    {
+      "region": "美洲地區 (United States)",
+      "flag": "🇺🇸",
+      "weight": "65.0%",
+      "desc": "配置美國科技趨勢股票與墮落天使BB級債券"
+    },
+    {
+      "region": "歐洲地區 (Europe)",
+      "flag": "🇪🇺",
+      "weight": "20.0%",
+      "desc": "歐洲優質投資級公司債與生技醫療主題股"
+    },
+    {
+      "region": "亞太地區 (Asia-Pacific)",
+      "flag": "🌏",
+      "weight": "11.0%",
+      "desc": "台灣半導體鏈與成熟亞洲高品質債券"
+    },
+    {
+      "region": "現金與貨幣市場預備",
+      "flag": "💵",
+      "weight": "4.0%",
+      "desc": "流動性管理與月配息資金發放預備金"
+    }
+  ],
+  "asset_allocation": [
+    {
+      "category": "全球未來趨勢主題股票 (Global Trend Equities)",
+      "icon": "fa-chart-line",
+      "weight": "48.0%",
+      "desc": "涵蓋半導體、AI、醫療保健、新能源等前瞻趨勢主題"
+    },
+    {
+      "category": "墜落天使非投資等級債 (Fallen Angels High Yield)",
+      "icon": "fa-shield-halved",
+      "weight": "30.0%",
+      "desc": "主打信用品質較佳之 BB 級高收益債，違約率低於一般高收債"
+    },
+    {
+      "category": "投資級公司債 (Investment Grade Bonds)",
+      "icon": "fa-building-columns",
+      "weight": "18.0%",
+      "desc": "提供穩定且安全的債息屏障，防禦景氣下行風險"
+    },
+    {
+      "category": "現金及流動資產 (Cash)",
+      "icon": "fa-coins",
+      "weight": "4.0%",
+      "desc": "流動性與配息準備資金"
+    }
+  ]
+}

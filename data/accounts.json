@@ -1,0 +1,66 @@
+{
+  "client": "sun",
+  "currency": "TWD",
+  "accounts": [
+    {
+      "account_id": "2318",
+      "name": "帳戶1",
+      "initial_amount": 2000000,
+      "current_balance": 1955366,
+      "total_deductions": 12550,
+      "total_dividends": 29353,
+      "valuation_date": "2026-08-25",
+      "basic_sum_insured": 2800000,
+      "life_death_benefit": 2772334,
+      "start_date": "2026-05-22",
+      "status": "active",
+      "holdings": [
+        {
+          "target_name": "BGTPB022柏瑞多重資產特別收益基金-B類型 - (配現金)",
+          "units": 295073.887267,
+          "avg_price": 6.7806,
+          "latest_price": 6.6267,
+          "cost_amount": 2000778,
+          "current_valuation": 1955366
+        }
+      ]
+    },
+    {
+      "account_id": "9318",
+      "name": "帳戶2",
+      "initial_amount": 1000000,
+      "current_balance": 998583,
+      "total_deductions": 4291,
+      "total_dividends": 0,
+      "valuation_date": "2026-08-25",
+      "start_date": "2026-06-30",
+      "status": "active",
+      "holdings": [
+        {
+          "target_name": "BGTPB022柏瑞多重資產特別收益基金-B類型 - (配現金)",
+          "units": 150690.823657,
+          "avg_price": 6.6399,
+          "latest_price": 6.6267,
+          "cost_amount": 1000572,
+          "current_valuation": 998583
+        }
+      ]
+    },
+    {
+      "account_id": "TBD",
+      "name": "帳戶3",
+      "initial_amount": null,
+      "current_balance": null,
+      "total_deductions": 0,
+      "total_dividends": 0,
+      "start_date": null,
+      "status": "pending_setup",
+      "holdings": []
+    }
+  ],
+  "total_initial_amount": 3000000,
+  "total_current_valuation": 2953949,
+  "total_deductions": 16841,
+  "total_dividends": 29353,
+  "last_updated": "2026-08-25T18:00:00+08:00"
+}
