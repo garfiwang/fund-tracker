@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>貝萊德世界礦業基金 A2 美元 - 基金研究與30天淨值報告</title>
+  <meta name="description" content="貝萊德世界礦業基金 A2 美元 (LU0075056555) 之 30 天淨值走勢、歷年淨值區間、持股明細與資產區域分佈研究報告。">
+  <meta name="theme-color" content="#f8fafc">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Header Navigation -->
+    <header class="header-nav">
+      <div class="brand-section">
+        <div class="brand-icon" style="background: #b45309;">
+          <i class="fa-solid fa-gem"></i>
+        </div>
+        <div>
+          <h1 class="brand-title">貝萊德世界礦業基金 A2 美元 (World Mining Fund)</h1>
+          <p class="brand-subtitle">代碼 / ISIN: LU0075056555 ｜ 計價: USD ｜ 風險等級: RR5 (高波動/戰略資源)</p>
+        </div>
+      </div>
+      <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+        <a href="index.html" class="nav-btn"><i class="fa-solid fa-building-flag"></i> 地產國企主頁</a>
+        <a href="featured_funds.html" class="nav-btn"><i class="fa-solid fa-folder-tree" style="color: var(--color-indigo);"></i> 精選基金中心</a>
+      </div>
+    </header>
+
+    <!-- Quick Overview Metrics -->
+    <section class="metrics-grid">
+      <div class="metric-card gold">
+        <div class="metric-header">
+          <span class="metric-label">最新參考淨值</span>
+          <div class="metric-icon"><i class="fa-solid fa-tag"></i></div>
+        </div>
+        <div class="metric-value text-gold" id="quickLatestNav">123.4500 USD</div>
+        <div class="metric-sub">
+          <span class="text-secondary">計算日期: 2026/08/28</span>
+        </div>
+      </div>
+
+      <div class="metric-card cyan">
+        <div class="metric-header">
+          <span class="metric-label">對照申購基準價</span>
+          <div class="metric-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        </div>
+        <div class="metric-value text-cyan" id="quickSubPrice">120.5000 USD</div>
+        <div class="metric-sub">
+          <span class="text-secondary">試算基準日: 2026/06/29</span>
+        </div>
+      </div>
+
+      <div class="metric-card emerald">
+        <div class="metric-header">
+          <span class="metric-label">配息政策與風險</span>
+          <div class="metric-icon"><i class="fa-solid fa-layer-group"></i></div>
+        </div>
+        <div class="metric-value text-emerald">A2 累積型 / RR5</div>
+        <div class="metric-sub text-emerald">
+          <i class="fa-solid fa-bolt"></i> 全球戰略金屬與新能源礦產龍頭
+        </div>
+      </div>
+
+      <div class="metric-card emerald">
+        <div class="metric-header">
+          <span class="metric-label">淨值資本變動</span>
+          <div class="metric-icon"><i class="fa-solid fa-chart-simple"></i></div>
+        </div>
+        <div class="metric-value text-emerald" id="quickCapitalDiff">+2.9500 USD</div>
+        <div class="metric-sub text-emerald" id="quickCapitalPct">
+          <i class="fa-solid fa-arrow-trend-up"></i> +2.45% 資本溢價
+        </div>
+      </div>
+    </section>
+
+    <!-- Fund Research 4-Tab Main Container -->
+    <section class="glass-panel" style="margin-bottom: 24px;">
+      <div class="panel-header" style="flex-wrap: wrap; gap: 12px;">
+        <div>
+          <h2 class="panel-title">
+            <i class="fa-solid fa-magnifying-glass-chart"></i> 貝萊德世界礦業基金 A2 美元 詳細分析報告
+          </h2>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <a href="featured_funds.html" class="nav-btn" style="background: var(--color-indigo); color: white; border: none; font-weight: 700;">
+            <i class="fa-solid fa-arrow-left"></i> 返回精選基金中心
+          </a>
+        </div>
+      </div>
+
+      <!-- Tab Buttons -->
+      <div style="display: flex; gap: 8px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-bottom: 20px; flex-wrap: wrap;">
+        <button class="nav-btn active" id="tabBtn-30days" onclick="switchTab('30days')">
+          <i class="fa-solid fa-chart-line"></i> 30天淨值趨勢
+        </button>
+        <button class="nav-btn" id="tabBtn-yearly" onclick="switchTab('yearly')">
+          <i class="fa-solid fa-calendar-days"></i> 歷年淨值區間
+        </button>
+        <button class="nav-btn" id="tabBtn-holdings" onclick="switchTab('holdings')">
+          <i class="fa-solid fa-list-check"></i> 前 10 大持股明細
+        </button>
+        <button class="nav-btn" id="tabBtn-allocation" onclick="switchTab('allocation')">
+          <i class="fa-solid fa-pie-chart"></i> 區域與金屬類別分佈
+        </button>
+      </div>
+
+      <!-- TAB 1: 30-Day NAV Chart & Table -->
+      <div id="tab-30days" class="tab-content">
+        <div style="margin-bottom: 24px; background: white; padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+          <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+            <i class="fa-solid fa-chart-area" style="color: #b45309;"></i> 近 30 天淨值走勢圖 (USD)
+          </h3>
+          <div style="height: 320px; width: 100%;">
+            <canvas id="nav30DaysChart"></canvas>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
+            <i class="fa-solid fa-table-list"></i> 近 30 天淨值明細數據
+          </h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>日期</th>
+                <th>淨值 (USD)</th>
+                <th>日漲跌 (USD)</th>
+                <th>單日幅度</th>
+              </tr>
+            </thead>
+            <tbody id="nav30DaysTableBody">
+              <!-- Dynamically Populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 2: Yearly NAV Summary -->
+      <div id="tab-yearly" class="tab-content" style="display: none;">
+        <div class="table-container">
+          <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
+            <i class="fa-solid fa-calendar-check"></i> 歷年淨值高低區間與投資焦點
+          </h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>年度</th>
+                <th>年度淨值區間 (USD)</th>
+                <th>配息政策</th>
+                <th>全球原物料與礦業核心脈動</th>
+              </tr>
+            </thead>
+            <tbody id="yearlySummaryTableBody">
+              <!-- Dynamically Populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 3: Top 10 Holdings -->
+      <div id="tab-holdings" class="tab-content" style="display: none;">
+        <div class="table-container">
+          <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">
+            <i class="fa-solid fa-trophy"></i> 前 10 大關鍵礦業與金屬持股 (佔比約 56.5%)
+          </h3>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>排名</th>
+                <th>企業名稱</th>
+                <th>業務類型</th>
+                <th>註冊國家 / 上市地</th>
+                <th>持股權重</th>
+              </tr>
+            </thead>
+            <tbody id="topHoldingsTableBody">
+              <!-- Dynamically Populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- TAB 4: Allocation -->
+      <div id="tab-allocation" class="tab-content" style="display: none;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+          <!-- Metal Sub-sectors -->
+          <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+            <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+              <i class="fa-solid fa-cubes"></i> 礦產與金屬類別分佈
+            </h3>
+            <div id="metalAllocationsList" style="display: flex; flex-direction: column; gap: 14px;">
+              <!-- Dynamically Populated -->
+            </div>
+          </div>
+
+          <!-- Geographic Regions -->
+          <div style="background: white; padding: 20px; border-radius: 12px; border: 1px solid var(--border-color);">
+            <h3 style="font-size: 1rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+              <i class="fa-solid fa-earth-americas"></i> 地理區域分佈
+            </h3>
+            <div id="regionAllocationsList" style="display: flex; flex-direction: column; gap: 14px;">
+              <!-- Dynamically Populated -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>貝萊德世界礦業基金 A2 美元 研究報告 &copy; 2026 | <a href="featured_funds.html">返回精選基金中心</a> | 發布於 <a href="https://github.com/garfiwang/fund-tracker" target="_blank">GitHub Repository</a></p>
+    </footer>
+
+  </div>
+
+  <script src="blackrock_mining_research.js"></script>
+</body>
+</html>

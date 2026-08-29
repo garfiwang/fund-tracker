@@ -1,0 +1,181 @@
+{
+  "fund_code": "BLACKROCK_WORLD_MINING_A2",
+  "fund_name": "貝萊德世界礦業基金 A2 美元 (BlackRock Global Funds - World Mining Fund A2 USD)",
+  "isin": "LU0075056555",
+  "currency": "USD",
+  "risk_level": "RR5",
+  "inception_date": "1997-03-24",
+  "dividend_frequency": "A2 累積型 (不配息)",
+  "latest_dividend_per_unit": 0.0,
+  "latest_nav": 123.4500,
+  "latest_nav_date": "2026-08-28",
+  "subscription_price": 120.5000,
+  "subscription_date": "2026-06-29",
+  "official_source_url": "https://www.blackrock.com/tw",
+  "nav_30_days": [
+    { "date": "2026/08/28", "nav": 123.45, "change": 0.95 },
+    { "date": "2026/08/27", "nav": 122.50, "change": 0.80 },
+    { "date": "2026/08/26", "nav": 121.70, "change": 0.65 },
+    { "date": "2026/08/25", "nav": 121.05, "change": -0.45 },
+    { "date": "2026/08/22", "nav": 121.50, "change": 0.70 },
+    { "date": "2026/08/21", "nav": 120.80, "change": 0.50 },
+    { "date": "2026/08/20", "nav": 120.30, "change": -0.60 },
+    { "date": "2026/08/19", "nav": 120.90, "change": 0.85 },
+    { "date": "2026/08/18", "nav": 120.05, "change": 0.40 },
+    { "date": "2026/08/15", "nav": 119.65, "change": -0.35 },
+    { "date": "2026/08/14", "nav": 120.00, "change": 0.60 },
+    { "date": "2026/08/13", "nav": 119.40, "change": 0.30 },
+    { "date": "2026/08/12", "nav": 119.10, "change": -0.70 },
+    { "date": "2026/08/11", "nav": 119.80, "change": 0.55 },
+    { "date": "2026/08/08", "nav": 119.25, "change": 0.45 },
+    { "date": "2026/08/07", "nav": 118.80, "change": -0.80 },
+    { "date": "2026/08/06", "nav": 119.60, "change": 0.90 },
+    { "date": "2026/08/05", "nav": 118.70, "change": 0.35 },
+    { "date": "2026/08/04", "nav": 118.35, "change": -0.50 },
+    { "date": "2026/08/01", "nav": 118.85, "change": 0.75 }
+  ],
+  "yearly_nav_summary": [
+    {
+      "year": "2024",
+      "nav_range": "95.50 - 118.20 USD",
+      "dividend_note": "A2 累積型",
+      "description": "全球能源轉型帶動銅、鎳需求強勁，基金淨值穩健攀升"
+    },
+    {
+      "year": "2025",
+      "nav_range": "105.30 - 122.80 USD",
+      "dividend_note": "A2 累積型",
+      "description": "黃金與戰略金屬價格創歷史新高，礦業巨頭自由現金流大幅增長"
+    },
+    {
+      "year": "2026 (至今)",
+      "nav_range": "115.60 - 124.50 USD",
+      "dividend_note": "A2 累積型",
+      "description": "AI 數據中心電網擴建與關鍵礦產供應吃緊，最新淨值站穩 123 USD 以上"
+    }
+  ],
+  "top_holdings": [
+    {
+      "rank": 1,
+      "name": "必和必拓 (BHP Group Ltd)",
+      "type": "綜合礦業巨頭 (鐵/銅/鎳)",
+      "country": "澳洲 / 英國",
+      "weight": "9.80%"
+    },
+    {
+      "rank": 2,
+      "name": "力拓集團 (Rio Tinto PLC)",
+      "type": "綜合礦業與鋁業",
+      "country": "英國 / 澳洲",
+      "weight": "8.20%"
+    },
+    {
+      "rank": 3,
+      "name": "嘉能可 (Glencore PLC)",
+      "type": "大宗商品金屬與貿易",
+      "country": "瑞士",
+      "weight": "7.50%"
+    },
+    {
+      "rank": 4,
+      "name": "自由港麥克莫蘭 (Freeport-McMoRan Inc)",
+      "type": "全球最大銅礦生產商",
+      "country": "美國",
+      "weight": "6.40%"
+    },
+    {
+      "rank": 5,
+      "name": "紐蒙特黃金公司 (Newmont Corp)",
+      "type": "全球最大金礦開採商",
+      "country": "美國",
+      "weight": "5.10%"
+    },
+    {
+      "rank": 6,
+      "name": "淡水河谷 (Vale SA)",
+      "type": "全球鐵礦石龍頭",
+      "country": "巴西",
+      "weight": "4.80%"
+    },
+    {
+      "rank": 7,
+      "name": "南方銅業 (Southern Copper Corp)",
+      "type": "高品質銅礦開採",
+      "country": "秘魯 / 美國",
+      "weight": "4.20%"
+    },
+    {
+      "rank": 8,
+      "name": "泰克資源 (Teck Resources Ltd)",
+      "type": "關鍵過渡金屬與銅",
+      "country": "加拿大",
+      "weight": "3.90%"
+    },
+    {
+      "rank": 9,
+      "name": "紫金礦業 (Zijin Mining Group)",
+      "type": "銅金多元礦產開發",
+      "country": "中國 / 香港",
+      "weight": "3.50%"
+    },
+    {
+      "rank": 10,
+      "name": "巴里克黃金 (Barrick Gold Corp)",
+      "type": "金礦與銅礦",
+      "country": "加拿大",
+      "weight": "3.10%"
+    }
+  ],
+  "regions": [
+    {
+      "region": "全球已開發市場 (北美/歐洲/澳紐)",
+      "flag": "🌐",
+      "weight": "68.5%",
+      "desc": "主要配置於美、英、澳等成熟法治國家之跨國礦業旗艦"
+    },
+    {
+      "region": "拉丁美洲與新興市場 (巴西/秘魯/智利)",
+      "flag": "🌎",
+      "weight": "21.5%",
+      "desc": "擁有全球品位最高之銅礦與鐵礦儲量地區"
+    },
+    {
+      "region": "亞洲及其他新興資源國",
+      "flag": "🌏",
+      "weight": "7.0%",
+      "desc": "包含大中華區與亞太具競爭力之採礦精煉企業"
+    },
+    {
+      "region": "流動現金與避險部位",
+      "flag": "💵",
+      "weight": "3.0%",
+      "desc": "保持流動性與衍生性商品風險管理"
+    }
+  ],
+  "asset_allocation": [
+    {
+      "category": "基本金屬與過渡金屬 (銅/鋁/鎳/鋅)",
+      "icon": "fa-cube",
+      "weight": "48.0%",
+      "desc": "全球電網升級、電動車與 AI 數據中心核心必需金屬"
+    },
+    {
+      "category": "貴金屬 (黃金/白銀/鉑金)",
+      "icon": "fa-gem",
+      "weight": "24.5%",
+      "desc": "抗通膨與全球地緣政治避險資產"
+    },
+    {
+      "category": "鋼鐵原料與大宗商品 (鐵礦石/焦煤)",
+      "icon": "fa-mountain",
+      "weight": "19.5%",
+      "desc": "全球基礎建設與製造業剛性需求"
+    },
+    {
+      "category": "關鍵戰略金屬與現金儲備 (鋰/稀土/Cash)",
+      "icon": "fa-coins",
+      "weight": "8.0%",
+      "desc": "新世代電池材料與流動資金管理"
+    }
+  ]
+}
