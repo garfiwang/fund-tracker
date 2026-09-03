@@ -7,15 +7,15 @@
   "inception_date": "2014-05-15",
   "dividend_frequency": "月配息",
   "latest_dividend_per_unit": 0.048,
-  "latest_nav": 8.4200,
-  "latest_nav_date": "2026-08-25",
+  "latest_nav": 8.1900,
+  "latest_nav_date": "2026-09-01",
   "subscription_price": 8.40,
   "subscription_date": "2026-06-29",
   "nav_30_days": [
     {
-      "date": "2026/08/25",
-      "nav": 8.4200,
-      "change": 0.0200
+      "date": "2026/09/01",
+      "nav": 8.1900,
+      "change": -0.0600
     },
     {
       "date": "2026/08/24",
