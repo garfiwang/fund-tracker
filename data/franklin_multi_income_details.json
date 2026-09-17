@@ -1,0 +1,185 @@
+{
+  "fund_code": "TW000T4518B2",
+  "fund_name": "富蘭克林華美多重資產收益基金-新台幣(分配型)",
+  "isin": "TW000T4518B2",
+  "currency": "TWD",
+  "risk_level": "RR3",
+  "inception_date": "2016-05-18",
+  "dividend_frequency": "月配息",
+  "latest_dividend_per_unit": 0.072,
+  "latest_nav": 8.4500,
+  "latest_nav_date": "2026-09-16",
+  "subscription_price": 8.5500,
+  "subscription_date": "2026-06-29",
+  "official_source_url": "https://www.ftft.com.tw",
+  "nav_30_days": [
+    { "date": "2026/09/16", "nav": 8.4500, "change": -0.0600 },
+    { "date": "2026/09/13", "nav": 8.5100, "change": 0.0200 },
+    { "date": "2026/09/10", "nav": 8.4900, "change": -0.0300 },
+    { "date": "2026/09/05", "nav": 8.5200, "change": 0.0100 },
+    { "date": "2026/09/02", "nav": 8.5100, "change": -0.0200 },
+    { "date": "2026/08/28", "nav": 8.5300, "change": 0.0150 },
+    { "date": "2026/08/25", "nav": 8.5150, "change": -0.0100 },
+    { "date": "2026/08/21", "nav": 8.5250, "change": 0.0200 },
+    { "date": "2026/08/18", "nav": 8.5050, "change": 0.0150 },
+    { "date": "2026/08/14", "nav": 8.4900, "change": -0.0250 },
+    { "date": "2026/08/11", "nav": 8.5150, "change": 0.0100 },
+    { "date": "2026/08/07", "nav": 8.5050, "change": 0.0120 },
+    { "date": "2026/08/04", "nav": 8.4930, "change": -0.0180 },
+    { "date": "2026/07/31", "nav": 8.5110, "change": 0.0150 },
+    { "date": "2026/07/28", "nav": 8.4960, "change": 0.0080 },
+    { "date": "2026/07/24", "nav": 8.4880, "change": -0.0120 },
+    { "date": "2026/07/21", "nav": 8.5000, "change": 0.0200 },
+    { "date": "2026/07/17", "nav": 8.4800, "change": -0.0150 },
+    { "date": "2026/07/14", "nav": 8.4950, "change": 0.0100 },
+    { "date": "2026/07/10", "nav": 8.4850, "change": 0.0050 },
+    { "date": "2026/07/07", "nav": 8.4800, "change": -0.0200 },
+    { "date": "2026/07/03", "nav": 8.5000, "change": 0.0100 },
+    { "date": "2026/06/30", "nav": 8.4900, "change": -0.0600 },
+    { "date": "2026/06/29", "nav": 8.5500, "change": 0.0000 }
+  ],
+  "yearly_nav_summary": [
+    {
+      "year": "2024",
+      "nav_range": "7.80 - 8.65 元",
+      "dividend_note": "月配 NT$ 0.065 - 0.070 / 單位",
+      "description": "全球股債齊揚，多重資產動態平衡，配息維持高檔穩定"
+    },
+    {
+      "year": "2025",
+      "nav_range": "8.10 - 8.85 元",
+      "dividend_note": "月配 NT$ 0.070 - 0.072 / 單位",
+      "description": "高品質投資級債與高息股抗震，年化配息率維持在 9%~10%"
+    },
+    {
+      "year": "2026 (至今)",
+      "nav_range": "8.35 - 8.68 元",
+      "dividend_note": "月配 NT$ 0.072 / 單位",
+      "description": "最新淨值穩定於 8.4500 元，持續提供強勁現金流回報"
+    }
+  ],
+  "top_holdings": [
+    {
+      "rank": 1,
+      "name": "iShares iBoxx 投資級公司債 ETF (LQD)",
+      "type": "投資級企業債券",
+      "country": "美國",
+      "weight": "8.20%"
+    },
+    {
+      "rank": 2,
+      "name": "iShares iBoxx 高收益公司債 ETF (HYG)",
+      "type": "非投資等級債券",
+      "country": "美國",
+      "weight": "7.80%"
+    },
+    {
+      "rank": 3,
+      "name": "Vanguard 標普500 ETF (VOO)",
+      "type": "美國核心大型股",
+      "country": "美國",
+      "weight": "7.50%"
+    },
+    {
+      "rank": 4,
+      "name": "VanEck 晨星半導體 ETF (SMH)",
+      "type": "半導體與先進科技",
+      "country": "全球",
+      "weight": "5.20%"
+    },
+    {
+      "rank": 5,
+      "name": "摩根大通 JPMorgan Chase & Co. (JPM)",
+      "type": "大型商業銀行股",
+      "country": "美國",
+      "weight": "3.80%"
+    },
+    {
+      "rank": 6,
+      "name": "微軟 Microsoft Corp (MSFT)",
+      "type": "雲端運算與AI龍頭",
+      "country": "美國",
+      "weight": "3.50%"
+    },
+    {
+      "rank": 7,
+      "name": "普洛斯 Prologis Inc (PLD)",
+      "type": "全球物流倉儲 REITs",
+      "country": "美國",
+      "weight": "3.20%"
+    },
+    {
+      "rank": 8,
+      "name": "公共存儲 Public Storage (PSA)",
+      "type": "自助倉儲 REITs",
+      "country": "美國",
+      "weight": "2.80%"
+    },
+    {
+      "rank": 9,
+      "name": "台積電 ADR (TSM)",
+      "type": "晶圓代工半導體龍頭",
+      "country": "台灣",
+      "weight": "2.60%"
+    },
+    {
+      "rank": 10,
+      "name": "蘋果 Apple Inc (AAPL)",
+      "type": "科技消費與生態系",
+      "country": "美國",
+      "weight": "2.40%"
+    }
+  ],
+  "regions": [
+    {
+      "region": "美國 (United States)",
+      "flag": "🇺🇸",
+      "weight": "68.0%",
+      "desc": "美國大型藍籌高股息股票、投資級債券與 REITs 核心資產"
+    },
+    {
+      "region": "歐洲 / 已開發市場 (Europe)",
+      "flag": "🇪🇺",
+      "weight": "16.0%",
+      "desc": "歐陸多元優質防禦性公用事業、金融債與跨國企業"
+    },
+    {
+      "region": "亞太與台灣 (Asia / Taiwan)",
+      "flag": "🇹🇼",
+      "weight": "11.0%",
+      "desc": "台灣半導體龍頭與亞太高成長實質資產"
+    },
+    {
+      "region": "現金與流動性資產 (Cash)",
+      "flag": "💵",
+      "weight": "5.0%",
+      "desc": "短期貨幣市場工具與動態調整預備金"
+    }
+  ],
+  "asset_allocation": [
+    {
+      "category": "全球債券與固定收益 (Fixed Income)",
+      "icon": "fa-building-columns",
+      "weight": "42.5%",
+      "desc": "投資級企業債、非投資等級高息債券，提供基底配息現金流"
+    },
+    {
+      "category": "全球高股息與趨勢股票 (Equities)",
+      "icon": "fa-chart-line",
+      "weight": "38.0%",
+      "desc": "標普500權值股、科技半導體與高股息龍頭，捕捉資本增長"
+    },
+    {
+      "category": "實質資產與不動產 (REITs)",
+      "icon": "fa-city",
+      "weight": "14.5%",
+      "desc": "全球物流、倉儲與數位基礎設施 REITs，具備抗通脹收益"
+    },
+    {
+      "category": "現金及流動資產 (Cash)",
+      "icon": "fa-coins",
+      "weight": "5.0%",
+      "desc": "高流動性存款與避險準備金"
+    }
+  ]
+}
